@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "insaSystem", "insaSystem\insaSystem.csproj", "{BFD43E76-B758-413B-B99E-03CAADCDDE51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Helper", "DB_Helper\DB_Helper.csproj", "{E2DA1E9F-97C7-4FF3-B592-5A1FAC1D02E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFD43E76-B758-413B-B99E-03CAADCDDE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD43E76-B758-413B-B99E-03CAADCDDE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD43E76-B758-413B-B99E-03CAADCDDE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD43E76-B758-413B-B99E-03CAADCDDE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2DA1E9F-97C7-4FF3-B592-5A1FAC1D02E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2DA1E9F-97C7-4FF3-B592-5A1FAC1D02E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2DA1E9F-97C7-4FF3-B592-5A1FAC1D02E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2DA1E9F-97C7-4FF3-B592-5A1FAC1D02E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A6CC9CD-1941-445F-A50B-E248ECB1643F}
+	EndGlobalSection
+EndGlobal

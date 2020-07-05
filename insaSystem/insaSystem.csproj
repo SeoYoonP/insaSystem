@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFD43E76-B758-413B-B99E-03CAADCDDE51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>insaSystem</RootNamespace>
+    <AssemblyName>insaSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=2.2.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=2.2.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=2.2.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=2.2.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.2.4\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.7.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoginHandler.cs" />
+    <Compile Include="Insa07ForlInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insa07ForlInfo.Designer.cs">
+      <DependentUpon>Insa07ForlInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insa06LicInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insa06LicInfo.Designer.cs">
+      <DependentUpon>Insa06LicInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insa05CarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insa05CarInfo.Designer.cs">
+      <DependentUpon>Insa05CarInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insa04AwardInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insa04AwardInfo.Designer.cs">
+      <DependentUpon>Insa04AwardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insa03EduInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insa03EduInfo.Designer.cs">
+      <DependentUpon>Insa03EduInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insa02FamInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insa02FamInfo.Designer.cs">
+      <DependentUpon>Insa02FamInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insa01BaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insa01BaseInfo.Designer.cs">
+      <DependentUpon>Insa01BaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsaMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsaMain.Designer.cs">
+      <DependentUpon>InsaMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenubar05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenubar05.Designer.cs">
+      <DependentUpon>MainMenubar05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenubar04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenubar04.Designer.cs">
+      <DependentUpon>MainMenubar04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenubar03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenubar03.Designer.cs">
+      <DependentUpon>MainMenubar03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenubar02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenubar02.Designer.cs">
+      <DependentUpon>MainMenubar02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenubar01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenubar01.Designer.cs">
+      <DependentUpon>MainMenubar01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsaLogin.Designer.cs">
+      <DependentUpon>InsaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsaMangement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsaMangement.Designer.cs">
+      <DependentUpon>InsaMangement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Insa07ForlInfo.resx">
+      <DependentUpon>Insa07ForlInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insa06LicInfo.resx">
+      <DependentUpon>Insa06LicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insa05CarInfo.resx">
+      <DependentUpon>Insa05CarInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insa04AwardInfo.resx">
+      <DependentUpon>Insa04AwardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insa03EduInfo.resx">
+      <DependentUpon>Insa03EduInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insa02FamInfo.resx">
+      <DependentUpon>Insa02FamInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insa01BaseInfo.resx">
+      <DependentUpon>Insa01BaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsaMain.resx">
+      <DependentUpon>InsaMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenubar05.resx">
+      <DependentUpon>MainMenubar05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenubar04.resx">
+      <DependentUpon>MainMenubar04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenubar03.resx">
+      <DependentUpon>MainMenubar03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenubar02.resx">
+      <DependentUpon>MainMenubar02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenubar01.resx">
+      <DependentUpon>MainMenubar01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsaLogin.resx">
+      <DependentUpon>InsaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsaMangement.resx">
+      <DependentUpon>InsaMangement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DB_Helper\DB_Helper.csproj">
+      <Project>{e2da1e9f-97c7-4ff3-b592-5a1fac1d02e9}</Project>
+      <Name>DB_Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
