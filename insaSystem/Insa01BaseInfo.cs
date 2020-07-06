@@ -14,7 +14,7 @@ namespace insaSystem
     public partial class Insa01BaseInfo : Form, IForm
     {
         DBOracle_Helper oHelper;
-        public InsaMangement MainForm { get; set; }
+        public InsaManagement MainForm { get; set; }
 
         public Insa01BaseInfo()
         {

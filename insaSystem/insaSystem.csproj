@@ -233,11 +233,11 @@
     <Compile Include="InsaLogin.Designer.cs">
       <DependentUpon>InsaLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="InsaMangement.cs">
+    <Compile Include="InsaManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InsaMangement.Designer.cs">
-      <DependentUpon>InsaMangement.cs</DependentUpon>
+    <Compile Include="InsaManagement.Designer.cs">
+      <DependentUpon>InsaManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -283,8 +283,8 @@
     <EmbeddedResource Include="InsaLogin.resx">
       <DependentUpon>InsaLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InsaMangement.resx">
-      <DependentUpon>InsaMangement.cs</DependentUpon>
+    <EmbeddedResource Include="InsaManagement.resx">
+      <DependentUpon>InsaManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

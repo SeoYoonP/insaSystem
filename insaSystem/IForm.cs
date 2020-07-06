@@ -8,7 +8,7 @@ namespace insaSystem
 {
     public interface IForm
     {
-        InsaMangement MainForm { get; set; }
+        InsaManagement MainForm { get; set; }
         //void Btn_query_clicked();
         void Btn_insert_clicked();
         void Btn_update_clicked();

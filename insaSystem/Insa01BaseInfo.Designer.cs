@@ -1229,12 +1229,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(825, 856);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Insa01BaseInfo";
-            this.Text = "Form1";
+            this.Tag = "1";
+            this.Text = "  인사기본사항";
             this.Load += new System.EventHandler(this.Insa01BaseInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);

@@ -17,6 +17,7 @@ namespace insaSystem
     {
         InsaLogin loginForm;
         Form assist;
+        InsaManagement mng;
 
         #region raindrops 초석, insa버튼 색깔 제어
         //raindrops 초석
@@ -491,7 +492,6 @@ namespace insaSystem
         //호출하기
         private void Call_assistMenu(object FormCall)
         {
-
             if (this.assistVertical.Controls.Count > 0)
                 this.assistVertical.Controls.RemoveAt(0);
             assist = FormCall as Form;
@@ -500,7 +500,6 @@ namespace insaSystem
             this.assistVertical.Controls.Add(assist);
             this.assistVertical.Tag = assist;
             assist.Show();
-
         }
 
         //닫아주기
@@ -509,6 +508,7 @@ namespace insaSystem
             Form assist_close = FormClose as Form;
             assist_close.Close();
         }
+
 
         #endregion
         #region 실시간 시간, 날짜 출력 함수

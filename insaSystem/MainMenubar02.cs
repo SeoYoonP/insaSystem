@@ -12,6 +12,7 @@ namespace insaSystem
 {
     public partial class MainMenubar02 : Form
     {
+        InsaManagement mng;
         public MainMenubar02()
         {
             InitializeComponent();
@@ -26,14 +27,15 @@ namespace insaSystem
         #region 선택 메뉴로 들어가기 Control
         private void InsaInput_Click(object sender, EventArgs e)
         {
-            InsaMangement InsaManSys = new InsaMangement(0);
+            InsaManagement InsaManSys = new InsaManagement(0);
             InsaManSys.ShowDialog();
+            
         }
 
         private void InsaInquiry_Click(object sender, EventArgs e)
         {
-            InsaMangement amb02 = new InsaMangement(7);
-            amb02.ShowDialog();
+            InsaManagement InsaManSys = new InsaManagement(7);
+            InsaManSys.ShowDialog();
         }
         #endregion
     }

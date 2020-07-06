@@ -14,19 +14,28 @@ namespace insaSystem
     //단위업무명 : 인사기록관리
     //프로그래머 : 박서윤
 
-    public partial class InsaMangement : Form
+    public partial class InsaManagement : Form
     {
         DBOracle_Helper oHelper;
 
         int tabPageNum;
         
-        public InsaMangement(int tp)
+        public InsaManagement(int tp)
         {
             InitializeComponent();
             tabPageNum = tp;
         }
 
-        private void InsaMangement_Load(Form form)
+        public void frm_load(Form form)
+        {
+            form.TopLevel = false;
+            tabControl1.TabPages.Add(form.Text);
+            tabControl1.TabPages[tabControl1.TabPages.Count - 1].Controls.Add(form);
+            form.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            form.Show();
+        }
+
+        private void InsaMangement_Load(object sender, EventArgs e)
         {
             #region 프로그램 시작 시 확인, 취소버튼 Block
             checkbtn.Enabled = false;
@@ -43,13 +52,13 @@ namespace insaSystem
             sabunDataGridView.Columns.Add("dept_name", "부서");
             #endregion
 
-            form.TopLevel = false;
-            tabControl1.TabPages.Add(form.Text);
-            tabControl1.TabPages[tabControl1.TabPages.Count - 1].Controls.Add(form);
-            form.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            form.Show();
-
-            InsaMangement_Load(new Insa01BaseInfo());
+            frm_load(new Insa01BaseInfo());
+            frm_load(new Insa02FamInfo());
+            frm_load(new Insa03EduInfo());
+            frm_load(new Insa04AwardInfo());
+            frm_load(new Insa05CarInfo());
+            frm_load(new Insa06LicInfo());
+            frm_load(new Insa07ForlInfo());
         }
         //시스템 state control
         #region 나가기, 최대화, 리스토어, 최소화 Btn Control

@@ -19,7 +19,7 @@ namespace insaSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InsaMain(Info));
+            Application.Run(new InsaManagement(0));
         }
     }
 }
