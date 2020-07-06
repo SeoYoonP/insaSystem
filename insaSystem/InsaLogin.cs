@@ -114,6 +114,7 @@ namespace insaSystem
                     MessageBox.Show("로그인 정보가 정확하지 않습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     username.Clear();
                     password.Clear();
+                    username.Focus();
                 }
             }
         }

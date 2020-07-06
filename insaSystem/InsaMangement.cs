@@ -26,7 +26,7 @@ namespace insaSystem
             tabPageNum = tp;
         }
 
-        private void InsaMangement_Load(object sender, EventArgs e)
+        private void InsaMangement_Load(Form form)
         {
             #region 프로그램 시작 시 확인, 취소버튼 Block
             checkbtn.Enabled = false;
@@ -37,12 +37,19 @@ namespace insaSystem
             #endregion
             #region 프로그램 시작 시 인사시스템 데이터 그리드뷰 기본 생성
             sabunDataGridView.BackgroundColor = Color.White;
-            //dataGridView1.Style.BackgroundColor = "#e8e8ff";
             sabunDataGridView.Columns.Add("bas_empno", "사번");
             sabunDataGridView.Columns.Add("bas_name", "성명");
             sabunDataGridView.Columns.Add("cd_codnms", "직급");
             sabunDataGridView.Columns.Add("dept_name", "부서");
             #endregion
+
+            form.TopLevel = false;
+            tabControl1.TabPages.Add(form.Text);
+            tabControl1.TabPages[tabControl1.TabPages.Count - 1].Controls.Add(form);
+            form.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            form.Show();
+
+            InsaMangement_Load(new Insa01BaseInfo());
         }
         //시스템 state control
         #region 나가기, 최대화, 리스토어, 최소화 Btn Control
@@ -119,5 +126,41 @@ namespace insaSystem
             }
         }
         #endregion
+
+        private void insertbtn_Click(object sender, EventArgs e)
+        {
+            IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
+            form.MainForm = this;
+            form.Btn_insert_clicked();
+
+        }
+
+        private void updatebtn_Click(object sender, EventArgs e)
+        {
+            IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
+            form.MainForm = this;
+            form.Btn_update_clicked();
+        }
+
+        private void deletebtn_Click(object sender, EventArgs e)
+        {
+            IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
+            form.MainForm = this;
+            form.Btn_delete_clicked();
+        }
+
+        private void checkbtn_Click(object sender, EventArgs e)
+        {
+            IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
+            form.MainForm = this;
+            form.Btn_check_clicked();
+        }
+
+        private void cancelbtn_Click(object sender, EventArgs e)
+        {
+            IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
+            form.MainForm = this;
+            form.Btn_cancel_clicked();
+        }
     }
 }

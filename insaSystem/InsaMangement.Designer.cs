@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsaMangement));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.insa_search = new System.Windows.Forms.GroupBox();
             this.insaSearch = new System.Windows.Forms.Button();
             this.qry_empno = new System.Windows.Forms.TextBox();
@@ -42,15 +42,6 @@
             this.qry_dept = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.sabunDataGridView = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.button2 = new System.Windows.Forms.Button();
             this.deletebtn = new System.Windows.Forms.Button();
@@ -77,10 +68,17 @@
             this.deleteElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.checkElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.cancelElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.tabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.insa_search.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sabunDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -92,6 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restorebtn)).BeginInit();
             this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // insa_search
@@ -180,10 +180,10 @@
             this.sabun_deptSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.sabun_deptSearch.ForeColor = System.Drawing.Color.Black;
             this.sabun_deptSearch.Image = ((System.Drawing.Image)(resources.GetObject("sabun_deptSearch.Image")));
-            this.sabun_deptSearch.Location = new System.Drawing.Point(372, 30);
+            this.sabun_deptSearch.Location = new System.Drawing.Point(373, 30);
             this.sabun_deptSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sabun_deptSearch.Name = "sabun_deptSearch";
-            this.sabun_deptSearch.Size = new System.Drawing.Size(28, 26);
+            this.sabun_deptSearch.Size = new System.Drawing.Size(27, 26);
             this.sabun_deptSearch.TabIndex = 1002;
             this.sabun_deptSearch.TabStop = false;
             this.sabun_deptSearch.UseVisualStyleBackColor = false;
@@ -217,139 +217,23 @@
             this.panel1.Size = new System.Drawing.Size(1329, 955);
             this.panel1.TabIndex = 34;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.metroTabPage1);
-            this.tabControl1.Controls.Add(this.metroTabPage5);
-            this.tabControl1.Controls.Add(this.metroTabPage3);
-            this.tabControl1.Controls.Add(this.metroTabPage2);
-            this.tabControl1.Controls.Add(this.metroTabPage7);
-            this.tabControl1.Controls.Add(this.metroTabPage6);
-            this.tabControl1.Controls.Add(this.metroTabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(473, 16);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(847, 923);
-            this.tabControl1.TabIndex = 21;
-            // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.BackColor = System.Drawing.Color.White;
-            this.metroTabPage1.Controls.Add(this.panel3);
-            this.metroTabPage1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 40);
-            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(839, 879);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "  인사기본정보 ";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(839, 879);
-            this.panel3.TabIndex = 2;
-            // 
-            // metroTabPage5
-            // 
-            this.metroTabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 40);
-            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(839, 879);
-            this.metroTabPage5.TabIndex = 4;
-            this.metroTabPage5.Text = "  경력사항";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 40);
-            this.metroTabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(839, 879);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "  학력사항";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 40);
-            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(839, 879);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "  가족사항";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage7
-            // 
-            this.metroTabPage7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.metroTabPage7.HorizontalScrollbarBarColor = true;
-            this.metroTabPage7.Location = new System.Drawing.Point(4, 40);
-            this.metroTabPage7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(839, 879);
-            this.metroTabPage7.TabIndex = 6;
-            this.metroTabPage7.Text = "  외국어";
-            this.metroTabPage7.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage6
-            // 
-            this.metroTabPage6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.metroTabPage6.HorizontalScrollbarBarColor = true;
-            this.metroTabPage6.Location = new System.Drawing.Point(4, 40);
-            this.metroTabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(839, 879);
-            this.metroTabPage6.TabIndex = 5;
-            this.metroTabPage6.Text = "  자격면허";
-            this.metroTabPage6.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage4
-            // 
-            this.metroTabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 40);
-            this.metroTabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(839, 879);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "  상벌이력";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            // 
             // sabunDataGridView
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.sabunDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sabunDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.sabunDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.sabunDataGridView.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.sabunDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sabunDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.sabunDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("맑은 고딕", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sabunDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("맑은 고딕", 10F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sabunDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.sabunDataGridView.ColumnHeadersHeight = 30;
             this.sabunDataGridView.DoubleBuffered = true;
             this.sabunDataGridView.EnableHeadersVisualStyles = false;
@@ -396,6 +280,7 @@
             this.deletebtn.TabIndex = 29;
             this.deletebtn.TabStop = false;
             this.deletebtn.UseVisualStyleBackColor = false;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // updatebtn
             // 
@@ -412,6 +297,7 @@
             this.updatebtn.TabIndex = 28;
             this.updatebtn.TabStop = false;
             this.updatebtn.UseVisualStyleBackColor = false;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // pictureBox1
             // 
@@ -473,7 +359,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label45.Location = new System.Drawing.Point(35, 13);
+            this.label45.Location = new System.Drawing.Point(35, 12);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(99, 20);
             this.label45.TabIndex = 1001;
@@ -494,7 +380,7 @@
             // 
             // btncheck
             // 
-            this.btncheck.Location = new System.Drawing.Point(1006, 63);
+            this.btncheck.Location = new System.Drawing.Point(1006, 62);
             this.btncheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btncheck.Name = "btncheck";
             this.btncheck.Size = new System.Drawing.Size(36, 25);
@@ -514,6 +400,7 @@
             this.cancelbtn.TabIndex = 31;
             this.cancelbtn.TabStop = false;
             this.cancelbtn.UseVisualStyleBackColor = false;
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // checkbtn
             // 
@@ -529,6 +416,7 @@
             this.checkbtn.TabIndex = 30;
             this.checkbtn.TabStop = false;
             this.checkbtn.UseVisualStyleBackColor = false;
+            this.checkbtn.Click += new System.EventHandler(this.checkbtn_Click);
             // 
             // maximizarbtn
             // 
@@ -572,11 +460,12 @@
             this.insertbtn.TabIndex = 27;
             this.insertbtn.TabStop = false;
             this.insertbtn.UseVisualStyleBackColor = false;
+            this.insertbtn.Click += new System.EventHandler(this.insertbtn_Click);
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(7, 3);
+            this.pictureBox10.Location = new System.Drawing.Point(7, 2);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(34, 38);
@@ -653,6 +542,121 @@
             this.cancelElipse.ElipseRadius = 25;
             this.cancelElipse.TargetControl = this.cancelbtn;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.metroTabPage1);
+            this.tabControl1.Controls.Add(this.metroTabPage2);
+            this.tabControl1.Controls.Add(this.metroTabPage3);
+            this.tabControl1.Controls.Add(this.metroTabPage4);
+            this.tabControl1.Controls.Add(this.metroTabPage5);
+            this.tabControl1.Controls.Add(this.metroTabPage6);
+            this.tabControl1.Controls.Add(this.metroTabPage7);
+            this.tabControl1.Location = new System.Drawing.Point(472, 17);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(848, 922);
+            this.tabControl1.TabIndex = 21;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.BackColor = System.Drawing.Color.White;
+            this.metroTabPage1.Controls.Add(this.panel3);
+            this.metroTabPage1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 40);
+            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(840, 878);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "  인사기본정보 ";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 40);
+            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(840, 878);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "  가족사항";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 40);
+            this.metroTabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(840, 878);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "  학력사항";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 40);
+            this.metroTabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(840, 878);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "  상벌이력";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 40);
+            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(840, 878);
+            this.metroTabPage5.TabIndex = 4;
+            this.metroTabPage5.Text = "  경력사항";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPage6
+            // 
+            this.metroTabPage6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage6.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.metroTabPage6.HorizontalScrollbarBarColor = true;
+            this.metroTabPage6.Location = new System.Drawing.Point(4, 40);
+            this.metroTabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTabPage6.Name = "metroTabPage6";
+            this.metroTabPage6.Size = new System.Drawing.Size(840, 878);
+            this.metroTabPage6.TabIndex = 5;
+            this.metroTabPage6.Text = "  자격면허";
+            this.metroTabPage6.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPage7
+            // 
+            this.metroTabPage7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.metroTabPage7.HorizontalScrollbarBarColor = true;
+            this.metroTabPage7.Location = new System.Drawing.Point(4, 40);
+            this.metroTabPage7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTabPage7.Name = "metroTabPage7";
+            this.metroTabPage7.Size = new System.Drawing.Size(840, 878);
+            this.metroTabPage7.TabIndex = 6;
+            this.metroTabPage7.Text = "  외국어";
+            this.metroTabPage7.VerticalScrollbarBarColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(0, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(840, 875);
+            this.panel3.TabIndex = 2;
+            // 
             // InsaMangement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -672,12 +676,9 @@
             this.Name = "InsaMangement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.InsaMangement_Load);
             this.insa_search.ResumeLayout(false);
             this.insa_search.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sabunDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -690,6 +691,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.restorebtn)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -735,12 +738,12 @@
         private Bunifu.Framework.UI.BunifuElipse cancelElipse;
         private MetroFramework.Controls.MetroTabControl tabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage5;
-        private MetroFramework.Controls.MetroTabPage metroTabPage7;
-        private MetroFramework.Controls.MetroTabPage metroTabPage6;
-        private MetroFramework.Controls.MetroTabPage metroTabPage4;
-        private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private MetroFramework.Controls.MetroTabPage metroTabPage4;
+        private MetroFramework.Controls.MetroTabPage metroTabPage5;
+        private MetroFramework.Controls.MetroTabPage metroTabPage6;
+        private MetroFramework.Controls.MetroTabPage metroTabPage7;
         private System.Windows.Forms.Panel panel3;
     }
 }

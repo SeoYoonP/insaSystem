@@ -500,6 +500,7 @@ namespace insaSystem
             this.assistVertical.Controls.Add(assist);
             this.assistVertical.Tag = assist;
             assist.Show();
+
         }
 
         //닫아주기
@@ -543,7 +544,7 @@ namespace insaSystem
         }
 
         #endregion
-
+         
         private void InsaMain_Load(object sender, EventArgs e)
         {
             loginForm = new InsaLogin();//로그인폼 생성

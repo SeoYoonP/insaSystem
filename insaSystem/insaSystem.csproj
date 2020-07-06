@@ -147,6 +147,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IForm.cs" />
     <Compile Include="LoginHandler.cs" />
     <Compile Include="Insa07ForlInfo.cs">
       <SubType>Form</SubType>
