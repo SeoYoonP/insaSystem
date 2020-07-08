@@ -12,7 +12,6 @@ namespace insaSystem
 {
     public partial class MainMenubar02 : Form
     {
-        InsaManagement mng;
         public MainMenubar02()
         {
             InitializeComponent();

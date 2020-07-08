@@ -17,7 +17,6 @@ namespace insaSystem
     {
         InsaLogin loginForm;
         Form assist;
-        InsaManagement mng;
 
         #region raindrops 초석, insa버튼 색깔 제어
         //raindrops 초석

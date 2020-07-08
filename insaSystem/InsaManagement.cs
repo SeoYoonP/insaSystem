@@ -149,6 +149,8 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_update_clicked();
+            //btnIUDGray();
+            //btnIUDBlock();
         }
 
         private void deletebtn_Click(object sender, EventArgs e)
@@ -170,6 +172,24 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_cancel_clicked();
+        }
+
+        private void btnIUDGray()
+        {
+            insertbtn.BackColor = Color.LightGray;
+            updatebtn.BackColor = Color.LightGray;
+            deletebtn.BackColor = Color.LightGray;
+            checkbtn.BackColor = Color.White;
+            cancelbtn.BackColor = Color.White;
+        }
+
+        private void btnIUDBlock()
+        {
+            insertbtn.Enabled = false;
+            updatebtn.Enabled = false;
+            deletebtn.Enabled = false;
+            checkbtn.Enabled = true;
+            cancelbtn.Enabled = true;
         }
     }
 }

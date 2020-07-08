@@ -1234,9 +1234,10 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Insa01BaseInfo";
             this.Tag = "1";
-            this.Text = "  인사기본사항";
+            this.Text = "인사기본사항";
             this.Load += new System.EventHandler(this.Insa01BaseInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
