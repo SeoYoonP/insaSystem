@@ -16,10 +16,12 @@ namespace insaSystem
 
     public partial class InsaManagement : Form
     {
+        static public string mode { get; set; }
+
         DBOracle_Helper oHelper;
 
         int tabPageNum;
-        
+
         public InsaManagement(int tp)
         {
             InitializeComponent();
@@ -104,7 +106,7 @@ namespace insaSystem
         #region 사번검색(고정) -- 기본화면
         //인사정보검색
         private void insaSearch_Click(object sender, EventArgs e)
-        {   
+        {
             try
             {
                 oHelper = new DBOracle_Helper();
@@ -122,7 +124,7 @@ namespace insaSystem
                     " order by bas_empno asc";
                 DataTable sabunSearch = oHelper.GetData(searchsql);
                 int cnt = 0;
-                foreach(DataRow item in sabunSearch.Rows)
+                foreach (DataRow item in sabunSearch.Rows)
                 {
                     sabunDataGridView.Rows.Add(item["BAS_EMPNO"].ToString(), item["BAS_NAME"].ToString(),
                                             item["cd_codnms"].ToString(), item["dept_name"].ToString());
@@ -149,8 +151,12 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_update_clicked();
-            //btnIUDGray();
-            //btnIUDBlock();
+            if (mode == "Run")
+            {
+                btnIUDGray();
+                btnIUDBlock();
+                mode = "";
+            }
         }
 
         private void deletebtn_Click(object sender, EventArgs e)

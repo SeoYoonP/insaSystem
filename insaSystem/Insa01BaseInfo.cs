@@ -25,6 +25,7 @@ namespace insaSystem
         private void Insa01BaseInfo_Load(object sender, EventArgs e)
         {
             oHelper = new DBOracle_Helper();
+           
         }
 
         public void Btn_insert_clicked()
@@ -43,10 +44,12 @@ namespace insaSystem
                 MessageBox.Show("사원번호를 입력하세요");
                 bas_empno.Focus();
                 InsabaseEnableFalse();
+                
                 return;
             }
             InsabaseEnableTrue();
-
+            InsaManagement.mode = "Run";
+            
             string sabun_sql = "select bas_empno,bas_resno,bas_name,bas_cname,bas_ename,bas_fix,bas_zip,bas_addr,bas_residence,bas_hdpno,bas_telno,bas_email,bas_mil_sta,bas_mil_mil,bas_mil_rnk,bas_mar,bas_acc_bank1,bas_acc_name1,bas_acc_no1,bas_acc_bank2,bas_acc_name2,bas_acc_no2,bas_cont,bas_intern,bas_intern_no,bas_emp_sdate,bas_emp_edate,bas_entdate,bas_resdate,bas_levdate,bas_reidate,bas_wsta,(bas_sts ||':'|| cd_codnms) as bas_sts,(bas_pos ||':'|| pos_codnms) as bas_pos ,(bas_dut ||':'|| dut_codnms) as bas_dut, (bas_dept ||':'||dept_name) as bas_dept,bas_rmk,bas_pos_dt,bas_dut_dt,bas_dept_dt,bas_intern_dt from thrm_bas_psy,(select cd_code, cd_codnms from tieas_cd_psy where cd_grpcd = 'STS'),(select cd_code as pos_code, cd_codnms as pos_codnms from tieas_cd_psy where cd_grpcd = 'POS'),(select cd_code as dut_code, cd_codnms as dut_codnms from tieas_cd_psy where cd_grpcd = 'DUT'), thrm_dept_psy where bas_sts =cd_code and bas_pos =pos_code and bas_dut = dut_code(+) and bas_empno='" + bas_empno.Text + "'";
 
             DataTable SabunInfo = oHelper.GetData(sabun_sql);
@@ -200,13 +203,6 @@ namespace insaSystem
                 {
                     bas_intern_dt.Format = DateTimePickerFormat.Custom;
                 }
-                //if (bas_emp_sdate == "" || bas_emp_edate == "")
-                //{
-
-                //}
-                //datetimepicker를 출력해주기위해 해야할 작업
-                //1. 문자열 변수 생성
-                //2. db로부터 불러온 값을 저장한 aa를 
                 bas_empno.Text = Row["bas_empno"] as string;
                 bas_resno.Text = Row["bas_resno"] as string;
                 bas_name.Text = Row["bas_name"] as string;

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace insaSystem
 {
-    public partial class Insa02FamInfo : Form, IForm, IForm
+    public partial class Insa02FamInfo : Form, IForm
     {
         DBOracle_Helper oHelper;
         public InsaManagement MainForm { get; set; }
