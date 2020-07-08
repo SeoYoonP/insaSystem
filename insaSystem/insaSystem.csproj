@@ -147,48 +147,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IForm.cs" />
-    <Compile Include="LoginHandler.cs" />
-    <Compile Include="Insa07ForlInfo.cs">
+    <Compile Include="InsaMngContent\IForm.cs" />
+    <Compile Include="Login\LoginHandler.cs" />
+    <Compile Include="InsaMngContent\Insa07ForlInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Insa07ForlInfo.Designer.cs">
+    <Compile Include="InsaMngContent\Insa07ForlInfo.Designer.cs">
       <DependentUpon>Insa07ForlInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Insa06LicInfo.cs">
+    <Compile Include="InsaMngContent\Insa06LicInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Insa06LicInfo.Designer.cs">
+    <Compile Include="InsaMngContent\Insa06LicInfo.Designer.cs">
       <DependentUpon>Insa06LicInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Insa05CarInfo.cs">
+    <Compile Include="InsaMngContent\Insa05CarInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Insa05CarInfo.Designer.cs">
+    <Compile Include="InsaMngContent\Insa05CarInfo.Designer.cs">
       <DependentUpon>Insa05CarInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Insa04AwardInfo.cs">
+    <Compile Include="InsaMngContent\Insa04AwardInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Insa04AwardInfo.Designer.cs">
+    <Compile Include="InsaMngContent\Insa04AwardInfo.Designer.cs">
       <DependentUpon>Insa04AwardInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Insa03EduInfo.cs">
+    <Compile Include="InsaMngContent\Insa03EduInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Insa03EduInfo.Designer.cs">
+    <Compile Include="InsaMngContent\Insa03EduInfo.Designer.cs">
       <DependentUpon>Insa03EduInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Insa02FamInfo.cs">
+    <Compile Include="InsaMngContent\Insa02FamInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Insa02FamInfo.Designer.cs">
+    <Compile Include="InsaMngContent\Insa02FamInfo.Designer.cs">
       <DependentUpon>Insa02FamInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Insa01BaseInfo.cs">
+    <Compile Include="InsaMngContent\Insa01BaseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Insa01BaseInfo.Designer.cs">
+    <Compile Include="InsaMngContent\Insa01BaseInfo.Designer.cs">
       <DependentUpon>Insa01BaseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="InsaMain.cs">
@@ -197,93 +197,93 @@
     <Compile Include="InsaMain.Designer.cs">
       <DependentUpon>InsaMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenubar05.cs">
+    <Compile Include="MainMenubar\MainMenubar05.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenubar05.Designer.cs">
+    <Compile Include="MainMenubar\MainMenubar05.Designer.cs">
       <DependentUpon>MainMenubar05.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenubar04.cs">
+    <Compile Include="MainMenubar\MainMenubar04.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenubar04.Designer.cs">
+    <Compile Include="MainMenubar\MainMenubar04.Designer.cs">
       <DependentUpon>MainMenubar04.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenubar03.cs">
+    <Compile Include="MainMenubar\MainMenubar03.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenubar03.Designer.cs">
+    <Compile Include="MainMenubar\MainMenubar03.Designer.cs">
       <DependentUpon>MainMenubar03.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenubar02.cs">
+    <Compile Include="MainMenubar\MainMenubar02.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenubar02.Designer.cs">
+    <Compile Include="MainMenubar\MainMenubar02.Designer.cs">
       <DependentUpon>MainMenubar02.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenubar01.cs">
+    <Compile Include="MainMenubar\MainMenubar01.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenubar01.Designer.cs">
+    <Compile Include="MainMenubar\MainMenubar01.Designer.cs">
       <DependentUpon>MainMenubar01.cs</DependentUpon>
     </Compile>
-    <Compile Include="InsaLogin.cs">
+    <Compile Include="Login\InsaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InsaLogin.Designer.cs">
+    <Compile Include="Login\InsaLogin.Designer.cs">
       <DependentUpon>InsaLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="InsaManagement.cs">
+    <Compile Include="InsaItemList\InsaManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InsaManagement.Designer.cs">
+    <Compile Include="InsaItemList\InsaManagement.Designer.cs">
       <DependentUpon>InsaManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Insa07ForlInfo.resx">
+    <EmbeddedResource Include="InsaMngContent\Insa07ForlInfo.resx">
       <DependentUpon>Insa07ForlInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Insa06LicInfo.resx">
+    <EmbeddedResource Include="InsaMngContent\Insa06LicInfo.resx">
       <DependentUpon>Insa06LicInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Insa05CarInfo.resx">
+    <EmbeddedResource Include="InsaMngContent\Insa05CarInfo.resx">
       <DependentUpon>Insa05CarInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Insa04AwardInfo.resx">
+    <EmbeddedResource Include="InsaMngContent\Insa04AwardInfo.resx">
       <DependentUpon>Insa04AwardInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Insa03EduInfo.resx">
+    <EmbeddedResource Include="InsaMngContent\Insa03EduInfo.resx">
       <DependentUpon>Insa03EduInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Insa02FamInfo.resx">
+    <EmbeddedResource Include="InsaMngContent\Insa02FamInfo.resx">
       <DependentUpon>Insa02FamInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Insa01BaseInfo.resx">
+    <EmbeddedResource Include="InsaMngContent\Insa01BaseInfo.resx">
       <DependentUpon>Insa01BaseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsaMain.resx">
       <DependentUpon>InsaMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenubar05.resx">
+    <EmbeddedResource Include="MainMenubar\MainMenubar05.resx">
       <DependentUpon>MainMenubar05.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenubar04.resx">
+    <EmbeddedResource Include="MainMenubar\MainMenubar04.resx">
       <DependentUpon>MainMenubar04.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenubar03.resx">
+    <EmbeddedResource Include="MainMenubar\MainMenubar03.resx">
       <DependentUpon>MainMenubar03.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenubar02.resx">
+    <EmbeddedResource Include="MainMenubar\MainMenubar02.resx">
       <DependentUpon>MainMenubar02.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenubar01.resx">
+    <EmbeddedResource Include="MainMenubar\MainMenubar01.resx">
       <DependentUpon>MainMenubar01.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InsaLogin.resx">
+    <EmbeddedResource Include="Login\InsaLogin.resx">
       <DependentUpon>InsaLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InsaManagement.resx">
+    <EmbeddedResource Include="InsaItemList\InsaManagement.resx">
       <DependentUpon>InsaManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -318,5 +318,6 @@
       <Name>DB_Helper</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

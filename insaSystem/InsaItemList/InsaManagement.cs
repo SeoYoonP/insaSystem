@@ -16,8 +16,7 @@ namespace insaSystem
 
     public partial class InsaManagement : Form
     {
-        static public string mode { get; set; }
-
+        static public string Mode { get; set; }
         DBOracle_Helper oHelper;
 
         int tabPageNum;
@@ -53,7 +52,7 @@ namespace insaSystem
             sabunDataGridView.Columns.Add("cd_codnms", "직급");
             sabunDataGridView.Columns.Add("dept_name", "부서");
             #endregion
-
+            #region InsaManageMentContent Load
             frm_load(new Insa01BaseInfo());
             frm_load(new Insa02FamInfo());
             frm_load(new Insa03EduInfo());
@@ -61,6 +60,7 @@ namespace insaSystem
             frm_load(new Insa05CarInfo());
             frm_load(new Insa06LicInfo());
             frm_load(new Insa07ForlInfo());
+            #endregion
         }
         //시스템 state control
         #region 나가기, 최대화, 리스토어, 최소화 Btn Control
@@ -143,7 +143,7 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_insert_clicked();
-
+            
         }
 
         private void updatebtn_Click(object sender, EventArgs e)
@@ -151,12 +151,7 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_update_clicked();
-            if (mode == "Run")
-            {
-                btnIUDGray();
-                btnIUDBlock();
-                mode = "";
-            }
+            BtnCotrol();
         }
 
         private void deletebtn_Click(object sender, EventArgs e)
@@ -164,6 +159,7 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_delete_clicked();
+            BtnCotrol();
         }
 
         private void checkbtn_Click(object sender, EventArgs e)
@@ -180,7 +176,7 @@ namespace insaSystem
             form.Btn_cancel_clicked();
         }
 
-        private void btnIUDGray()
+        private void BtnIUDGray()
         {
             insertbtn.BackColor = Color.LightGray;
             updatebtn.BackColor = Color.LightGray;
@@ -188,14 +184,24 @@ namespace insaSystem
             checkbtn.BackColor = Color.White;
             cancelbtn.BackColor = Color.White;
         }
-
-        private void btnIUDBlock()
+        private void BtnIUDBlock()
         {
             insertbtn.Enabled = false;
             updatebtn.Enabled = false;
             deletebtn.Enabled = false;
             checkbtn.Enabled = true;
             cancelbtn.Enabled = true;
+
+        }
+        private void BtnCotrol()
+        {
+            if (Mode == "Run")
+            {
+                BtnIUDGray();
+                BtnIUDBlock();
+                Mode = "";
+            }
         }
     }
 }
+ 

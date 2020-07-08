@@ -602,7 +602,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.PictureBox minimizarbtn;
-        private System.Windows.Forms.TextBox btncheck;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Button checkbtn;
         private System.Windows.Forms.PictureBox maximizarbtn;
@@ -620,6 +619,7 @@
         private Bunifu.Framework.UI.BunifuElipse checkElipse;
         private Bunifu.Framework.UI.BunifuElipse cancelElipse;
         public MetroFramework.Controls.MetroTabControl tabControl1;
+        public System.Windows.Forms.TextBox btncheck;
     }
 }
 

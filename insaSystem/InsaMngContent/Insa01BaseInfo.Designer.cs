@@ -120,6 +120,7 @@
             this.bas_empno = new System.Windows.Forms.TextBox();
             this.bas_cname = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
+            this.BtnCheck = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -885,6 +886,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.BtnCheck);
             this.groupBox2.Controls.Add(this.bas_intern_no);
             this.groupBox2.Controls.Add(this.bas_dept);
             this.groupBox2.Controls.Add(this.bas_dept_code);
@@ -1225,6 +1227,13 @@
             this.label46.TabIndex = 11;
             this.label46.Text = "성명(영문)";
             // 
+            // BtnCheck
+            // 
+            this.BtnCheck.Location = new System.Drawing.Point(689, 409);
+            this.BtnCheck.Name = "BtnCheck";
+            this.BtnCheck.Size = new System.Drawing.Size(100, 29);
+            this.BtnCheck.TabIndex = 157;
+            // 
             // Insa01BaseInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1341,5 +1350,6 @@
         private System.Windows.Forms.TextBox bas_empno;
         private System.Windows.Forms.TextBox bas_cname;
         private System.Windows.Forms.Label label46;
+        public System.Windows.Forms.TextBox BtnCheck;
     }
 }
