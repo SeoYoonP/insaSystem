@@ -751,7 +751,7 @@ namespace insaSystem
         private void sabun_deptSearch_Click(object sender, EventArgs e)
         {
             //SearchDeptForm frm2 = new SearchDeptForm(this);
-            frm2.ShowDialog();
+            //frm2.ShowDialog();
         }
         #endregion
         #region 부서, 주소 새창 띄우기 -- 인사기본사항
