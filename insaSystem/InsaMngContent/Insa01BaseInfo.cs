@@ -750,7 +750,7 @@ namespace insaSystem
 
         private void sabun_deptSearch_Click(object sender, EventArgs e)
         {
-            SearchDeptForm frm2 = new SearchDeptForm(this);
+            //SearchDeptForm frm2 = new SearchDeptForm(this);
             frm2.ShowDialog();
         }
         #endregion
@@ -827,7 +827,7 @@ namespace insaSystem
 
         private void bas_dept_cdbt_Click(object sender, EventArgs e)
         {
-            SearchDeptForm frm2 = new SearchDeptForm(this);
+            //SearchDeptForm frm2 = new SearchDeptForm(this);
             frm2.ShowDialog();
         }
         #endregion
