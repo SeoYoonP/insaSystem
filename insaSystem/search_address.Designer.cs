@@ -59,6 +59,7 @@
             this.addresstxt.Name = "addresstxt";
             this.addresstxt.Size = new System.Drawing.Size(244, 23);
             this.addresstxt.TabIndex = 0;
+            this.addresstxt.Click += new System.EventHandler(this.addresstxt_TextChanged);
             // 
             // previousbtn
             // 
@@ -70,6 +71,7 @@
             this.previousbtn.Size = new System.Drawing.Size(45, 45);
             this.previousbtn.TabIndex = 24;
             this.previousbtn.UseVisualStyleBackColor = true;
+            this.previousbtn.Click += new System.EventHandler(this.previousbtn_Click);
             // 
             // search
             // 
@@ -79,6 +81,7 @@
             this.search.TabIndex = 2;
             this.search.Text = "검색";
             this.search.UseVisualStyleBackColor = true;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // groupBox1
             // 
@@ -123,6 +126,7 @@
             this.nextbtn.Size = new System.Drawing.Size(45, 45);
             this.nextbtn.TabIndex = 25;
             this.nextbtn.UseVisualStyleBackColor = true;
+            this.nextbtn.Click += new System.EventHandler(this.nextbtn_Click);
             // 
             // panel2
             // 
@@ -160,6 +164,7 @@
             this.minimizarbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minimizarbtn.TabIndex = 1008;
             this.minimizarbtn.TabStop = false;
+            this.minimizarbtn.Click += new System.EventHandler(this.minimizarbtn_Click);
             // 
             // exitbtn
             // 
@@ -173,6 +178,7 @@
             this.exitbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.exitbtn.TabIndex = 1005;
             this.exitbtn.TabStop = false;
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             // 
             // pictureBox10
             // 
@@ -221,7 +227,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(629, 286);
             this.dataGridView1.TabIndex = 27;
             // 
-            // Form1
+            // search_address
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,8 +238,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "search_address";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.search_address_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);

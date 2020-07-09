@@ -98,6 +98,7 @@
             this.label57 = new System.Windows.Forms.Label();
             this.bas_wsta = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnCheck = new System.Windows.Forms.TextBox();
             this.label81 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
@@ -120,7 +121,6 @@
             this.bas_empno = new System.Windows.Forms.TextBox();
             this.bas_cname = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.BtnCheck = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -210,6 +210,11 @@
             // 
             this.bas_mil_rnk.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.bas_mil_rnk.FormattingEnabled = true;
+            this.bas_mil_rnk.Items.AddRange(new object[] {
+            "병장",
+            "상병",
+            "일명",
+            "이병"});
             this.bas_mil_rnk.Location = new System.Drawing.Point(146, 111);
             this.bas_mil_rnk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bas_mil_rnk.MaxLength = 4;
@@ -253,11 +258,20 @@
             this.bas_fix.Size = new System.Drawing.Size(114, 28);
             this.bas_fix.TabIndex = 0;
             this.bas_fix.TabStop = false;
+            this.bas_fix.SelectedIndexChanged += new System.EventHandler(this.bas_fix_SelectedIndexChanged);
             // 
             // bas_mil_mil
             // 
             this.bas_mil_mil.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.bas_mil_mil.FormattingEnabled = true;
+            this.bas_mil_mil.Items.AddRange(new object[] {
+            "육군",
+            "해군",
+            "해병대",
+            "공군",
+            "의무경찰",
+            "해양경찰",
+            "의무소방"});
             this.bas_mil_mil.Location = new System.Drawing.Point(145, 75);
             this.bas_mil_mil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bas_mil_mil.MaxLength = 4;
@@ -289,6 +303,7 @@
             this.bas_dept_cdbt.TabIndex = 147;
             this.bas_dept_cdbt.TabStop = false;
             this.bas_dept_cdbt.UseVisualStyleBackColor = true;
+            this.bas_dept_cdbt.Click += new System.EventHandler(this.bas_dept_cdbt_Click);
             // 
             // bas_residence
             // 
@@ -730,6 +745,7 @@
             this.bas_intern.Size = new System.Drawing.Size(134, 28);
             this.bas_intern.TabIndex = 96;
             this.bas_intern.TabStop = false;
+            this.bas_intern.SelectedIndexChanged += new System.EventHandler(this.bas_intern_SelectedIndexChanged_1);
             // 
             // bas_acc_no1
             // 
@@ -856,6 +872,7 @@
             this.bas_cont.Size = new System.Drawing.Size(134, 28);
             this.bas_cont.TabIndex = 93;
             this.bas_cont.TabStop = false;
+            this.bas_cont.SelectedIndexChanged += new System.EventHandler(this.bas_cont_SelectedIndexChanged);
             // 
             // label57
             // 
@@ -882,6 +899,7 @@
             this.bas_wsta.Size = new System.Drawing.Size(132, 28);
             this.bas_wsta.TabIndex = 92;
             this.bas_wsta.TabStop = false;
+            this.bas_wsta.SelectedIndexChanged += new System.EventHandler(this.bas_wsta_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -956,6 +974,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "상세정보";
             // 
+            // BtnCheck
+            // 
+            this.BtnCheck.Location = new System.Drawing.Point(689, 409);
+            this.BtnCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnCheck.Name = "BtnCheck";
+            this.BtnCheck.Size = new System.Drawing.Size(100, 29);
+            this.BtnCheck.TabIndex = 157;
+            // 
             // label81
             // 
             this.label81.AutoSize = true;
@@ -1022,6 +1048,7 @@
             this.bas_mil_sta.Size = new System.Drawing.Size(132, 28);
             this.bas_mil_sta.TabIndex = 89;
             this.bas_mil_sta.TabStop = false;
+            this.bas_mil_sta.SelectedIndexChanged += new System.EventHandler(this.bas_mil_sta_SelectedIndexChanged);
             // 
             // label85
             // 
@@ -1196,6 +1223,7 @@
             this.bas_zip_cdbt.TabIndex = 148;
             this.bas_zip_cdbt.TabStop = false;
             this.bas_zip_cdbt.UseVisualStyleBackColor = true;
+            this.bas_zip_cdbt.Click += new System.EventHandler(this.bas_zip_cdbt_Click);
             // 
             // bas_empno
             // 
@@ -1226,13 +1254,6 @@
             this.label46.Size = new System.Drawing.Size(79, 20);
             this.label46.TabIndex = 11;
             this.label46.Text = "성명(영문)";
-            // 
-            // BtnCheck
-            // 
-            this.BtnCheck.Location = new System.Drawing.Point(689, 409);
-            this.BtnCheck.Name = "BtnCheck";
-            this.BtnCheck.Size = new System.Drawing.Size(100, 29);
-            this.BtnCheck.TabIndex = 157;
             // 
             // Insa01BaseInfo
             // 

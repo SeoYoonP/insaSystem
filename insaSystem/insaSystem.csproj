@@ -148,6 +148,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SearchDeptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDeptForm.Designer.cs">
+      <DependentUpon>SearchDeptForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="search_address.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SearchDeptForm.resx">
+      <DependentUpon>SearchDeptForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="search_address.resx">
       <DependentUpon>search_address.cs</DependentUpon>
     </EmbeddedResource>

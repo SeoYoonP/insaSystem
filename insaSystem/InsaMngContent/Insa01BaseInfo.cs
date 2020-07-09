@@ -14,7 +14,7 @@ namespace insaSystem
     public partial class Insa01BaseInfo : Form, IForm
     {
         DBOracle_Helper oHelper;
-        public InsaManagement MainForm { get; set; }
+        public InsaManagement InsaManagement { get; set; }
         string bas_mar = "";
 
         public Insa01BaseInfo()
@@ -35,14 +35,14 @@ namespace insaSystem
             MessageBox.Show("인사기본사항 입력을 시작합니다.");
 
             //this.BackColor = Color.LightGray;
-            //this.textBox1.Text = MainForm.textBox1.Text;
+            //this.textBox1.Text = InsaManagement.textBox1.Text;
         }
 
         public void Btn_update_clicked()
         {
             CallingEmployeeInfo();
             BtnCheck.Text = "U";
-            MainForm.btncheck.Text = this.BtnCheck.Text;
+            InsaManagement.btncheck.Text = this.BtnCheck.Text;
             //InsaManagement.Mode = "";
 
         }
@@ -52,7 +52,7 @@ namespace insaSystem
             CallingEmployeeInfo();
             BtnCheck.Text = "D";
             InsabaseEnableFalse();
-            MainForm.btncheck.Text = this.BtnCheck.Text;
+            InsaManagement.btncheck.Text = this.BtnCheck.Text;
             //InsaManagement.Mode = "";
         }
 
@@ -84,7 +84,7 @@ namespace insaSystem
             result = bas_dept.Text;
             string[] dept = result.Split(':');
 
-            if (MainForm.btncheck.Text == "U")
+            if (InsaManagement.btncheck.Text == "U")
             {
                 if (MessageBox.Show("수정하시겠습니까?", "수정", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -139,7 +139,7 @@ namespace insaSystem
                 }
             }
 
-            if (MainForm.btncheck.Text == "D")
+            if (InsaManagement.btncheck.Text == "D")
             {
                 if (MessageBox.Show("삭제하시겠습니까?", "삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -164,7 +164,7 @@ namespace insaSystem
 
         public void Btn_cancel_clicked()
         {
-            if (MainForm.btncheck.Text == "I")
+            if (InsaManagement.btncheck.Text == "I")
             {
                 if (MessageBox.Show("취소하시면 입력하신 정보가 모두 저장되지 않습니다. 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -182,7 +182,7 @@ namespace insaSystem
                 InsaManagement.Mode = "BlockCC";
             }
 
-            if (MainForm.btncheck.Text == "U")
+            if (InsaManagement.btncheck.Text == "U")
             {
                 if (MessageBox.Show("수정을 취소합니다.", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -200,7 +200,7 @@ namespace insaSystem
                 InsaManagement.Mode = "BlockCC";
             }
 
-            if (MainForm.btncheck.Text == "D")
+            if (InsaManagement.btncheck.Text == "D")
             {
                 if (MessageBox.Show("데이터 삭제가 취소되었습니다 . 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -400,10 +400,12 @@ namespace insaSystem
                     date_emp_sdate = Row["bas_emp_sdate"] as string;
                     date_emp_sdate_print = date_emp_sdate.Substring(0, 4) + "-" + date_emp_sdate.Substring(4, 2) + "-" + date_emp_sdate.Substring(6, 2);
                     bas_emp_sdate.Text = date_emp_sdate_print;
+                    MessageBox.Show(date_emp_sdate_print);
                 }
                 else
                 {
                     bas_emp_sdate.Format = DateTimePickerFormat.Custom;
+                    MessageBox.Show(bas_emp_sdate.ToString());
                 }
 
                 if (Row["bas_emp_edate"] as string != null)
@@ -547,8 +549,10 @@ namespace insaSystem
                 {
                     bas_mar1.Checked = true;
                 }
+                continue;
             }
-        }
+        }//수정필요
+
         private void ValidationChecking()
         {
             int num = 0;
@@ -750,8 +754,8 @@ namespace insaSystem
 
         private void sabun_deptSearch_Click(object sender, EventArgs e)
         {
-            //SearchDeptForm frm2 = new SearchDeptForm(this);
-            //frm2.ShowDialog();
+            SearchDeptForm frm2 = new SearchDeptForm(this);
+            frm2.ShowDialog();
         }
         #endregion
         #region 부서, 주소 새창 띄우기 -- 인사기본사항
@@ -827,8 +831,129 @@ namespace insaSystem
 
         private void bas_dept_cdbt_Click(object sender, EventArgs e)
         {
-            //SearchDeptForm frm2 = new SearchDeptForm(this);
-            //frm2.ShowDialog();
+            SearchDeptForm frm2 = new SearchDeptForm(this);
+            frm2.ShowDialog();
+        }
+        #endregion
+        #region 인사기본사항 Textbox 상태 변화 함수 -- 인사기본사항
+        //계약직, 정규직 선택에 따른 연관된 Textbox 상태 변화 함수
+        private void bas_cont_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bas_cont.Text == "계약직")
+            {
+
+                bas_intern.Enabled = false;
+                bas_dut.Enabled = false;
+                bas_dut.Text = "";
+                bas_intern.Text = "";
+                bas_intern_no.Text = "";
+                bas_emp_edate.Enabled = true;
+                bas_emp_sdate.Enabled = true;
+                bas_pos_dt.Enabled = true;
+                bas_entdate.Enabled = true;
+                bas_dut_dt.Enabled = false;
+                bas_dept_dt.Enabled = true;
+                bas_intern_dt.Enabled = false;
+                bas_resdate.Enabled = false;
+                bas_levdate.Enabled = false;
+                bas_reidate.Enabled = false;
+                bas_emp_edate.Format = DateTimePickerFormat.Short;
+                bas_emp_sdate.Format = DateTimePickerFormat.Short;
+
+                bas_pos_dt.Format = DateTimePickerFormat.Short;
+                bas_dut_dt.Format = DateTimePickerFormat.Custom;
+                bas_dept_dt.Format = DateTimePickerFormat.Short;
+                bas_intern_dt.Format = DateTimePickerFormat.Custom;
+                bas_resdate.Format = DateTimePickerFormat.Custom;
+                bas_levdate.Format = DateTimePickerFormat.Custom;
+                bas_reidate.Format = DateTimePickerFormat.Custom;
+
+            }
+            else if (bas_cont.Text == "정규직")
+            {
+                bas_emp_edate.Enabled = false;
+                bas_emp_sdate.Enabled = false;
+                bas_intern.Enabled = true;
+                bas_pos_dt.Enabled = true;
+                bas_dut_dt.Enabled = true;
+                bas_dept_dt.Enabled = true;
+                bas_intern_dt.Enabled = true;
+                bas_entdate.Enabled = true;
+
+                bas_pos_dt.Format = DateTimePickerFormat.Short;
+                bas_dut_dt.Format = DateTimePickerFormat.Short;
+                bas_dept_dt.Format = DateTimePickerFormat.Short;
+                bas_intern_dt.Format = DateTimePickerFormat.Short;
+                bas_entdate.Format = DateTimePickerFormat.Short;
+                bas_emp_sdate.Format = DateTimePickerFormat.Custom;
+                bas_emp_edate.Format = DateTimePickerFormat.Custom;
+            }
+        }
+
+        //군대관련 복무일경우와 아닐경우의 textbox enable 변화
+        private void bas_mil_sta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (bas_mil_sta.Text == "복무")
+            {
+                bas_mil_mil.Enabled = true;
+                bas_mil_rnk.Enabled = true;
+            }
+            else if (bas_mil_sta.Text != "복무")
+            {
+                bas_mil_mil.Text = "";
+                bas_mil_mil.Enabled = false;
+                bas_mil_rnk.Text = "";
+                bas_mil_rnk.Enabled = false;
+            }
+        }
+        //수습/인턴 선택에따른 개월수 변화 함수
+        private void bas_intern_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (bas_intern.Text == "수습")
+            {
+                bas_intern_no.Text = "3";
+            }
+            else if (bas_intern.Text == "인턴")
+            {
+                bas_intern_no.Text = "9";
+            }
+        }
+
+        // 재직과 무직의 선택에 따른 Textbox enable변화 함수
+        private void bas_wsta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bas_wsta.Text == "재직")
+            {
+                bas_pos_dt.Enabled = true;
+                bas_dut_dt.Enabled = true;
+                bas_dept_dt.Enabled = true;
+                bas_intern_dt.Enabled = true;
+                bas_entdate.Enabled = true;
+            }
+            else if (bas_wsta.Text == "무직")
+            {
+                bas_levdate.Enabled = true;
+                bas_reidate.Enabled = true;
+            }
+            else if (bas_wsta.Text == "퇴직")
+            {
+                bas_resdate.Enabled = true;
+            }
+        }
+
+        //성별이 여성에 따른 textbox enable 변화 함수
+        private void bas_fix_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bas_fix.Text == "여")
+            {
+                bas_mil_sta.Text = "";
+                bas_mil_sta.Enabled = false;
+                bas_mil_mil.Text = "";
+                bas_mil_mil.Enabled = false;
+                bas_mil_rnk.Text = "";
+                bas_mil_rnk.Enabled = false;
+            }
         }
         #endregion
     }
