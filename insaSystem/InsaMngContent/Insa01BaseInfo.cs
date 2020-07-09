@@ -828,7 +828,7 @@ namespace insaSystem
         private void bas_dept_cdbt_Click(object sender, EventArgs e)
         {
             //SearchDeptForm frm2 = new SearchDeptForm(this);
-            frm2.ShowDialog();
+            //frm2.ShowDialog();
         }
         #endregion
     }
