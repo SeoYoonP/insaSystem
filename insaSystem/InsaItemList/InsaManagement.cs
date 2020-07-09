@@ -143,7 +143,7 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_insert_clicked();
-            
+            BtnCotrol();
         }
 
         private void updatebtn_Click(object sender, EventArgs e)
@@ -167,6 +167,8 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_check_clicked();
+            MessageBox.Show(Mode);
+            BtnCotrol();
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)
@@ -174,8 +176,17 @@ namespace insaSystem
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
             form.MainForm = this;
             form.Btn_cancel_clicked();
+            BtnCotrol();
         }
 
+        private void BtnIUDBlock()
+        {
+            insertbtn.Enabled = false;
+            updatebtn.Enabled = false;
+            deletebtn.Enabled = false;
+            checkbtn.Enabled = true;
+            cancelbtn.Enabled = true;
+        }
         private void BtnIUDGray()
         {
             insertbtn.BackColor = Color.LightGray;
@@ -184,24 +195,42 @@ namespace insaSystem
             checkbtn.BackColor = Color.White;
             cancelbtn.BackColor = Color.White;
         }
-        private void BtnIUDBlock()
-        {
-            insertbtn.Enabled = false;
-            updatebtn.Enabled = false;
-            deletebtn.Enabled = false;
-            checkbtn.Enabled = true;
-            cancelbtn.Enabled = true;
 
+        private void BtnCCBlock()
+        {
+            insertbtn.Enabled = true;
+            updatebtn.Enabled = true;
+            deletebtn.Enabled = true;
+            checkbtn.Enabled = false;
+            cancelbtn.Enabled = false;
         }
+        private void BtnCCGray()
+        {
+            insertbtn.BackColor = Color.White;
+            updatebtn.BackColor = Color.White;
+            deletebtn.BackColor = Color.White;
+            checkbtn.BackColor = Color.LightGray;
+            cancelbtn.BackColor = Color.LightGray;
+        }
+
         private void BtnCotrol()
         {
-            if (Mode == "Run")
+            if (Mode == "BlockIUD")
             {
                 BtnIUDGray();
                 BtnIUDBlock();
                 Mode = "";
             }
+            
+            if(Mode == "BlockCC")
+            {
+                BtnCCBlock();
+                BtnCCGray();
+                Mode = "";
+            }
         }
+
+
     }
 }
  
