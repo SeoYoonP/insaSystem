@@ -21,9 +21,33 @@ namespace insaSystem
             InitializeComponent();
         }
 
+        public void DataGridView_Double_clicked()
+        {
+
+        }
+
         public void Btn_insert_clicked()
         {
-            MessageBox.Show("가족사항 입력을 시작합니다.");
+            if (bas_empno_fam.Text == "")
+            {
+                MessageBox.Show("입력할 사원정보를 선택하세요");
+                return;
+            }
+            else
+            { 
+                fam_rel.Focus();
+                MessageBox.Show("가족정보 입력을 시작합니다.");
+
+                fam_rel.Text = "";
+                fam_name.Text = "";
+                fam_bth.Text = "";
+                fam_ltg.Text = "";
+                fam_rel.Enabled = true;
+                fam_name.Enabled = true;
+
+                InsaManagement.btncheck.Text = "F_I";
+                InsaManagement.Mode = "BlockIUD";
+            }
         }
 
         public void Btn_update_clicked()

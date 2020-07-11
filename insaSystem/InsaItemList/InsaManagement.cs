@@ -17,6 +17,14 @@ namespace insaSystem
     public partial class InsaManagement : Form
     {
         static public string Mode { get; set; }
+        //public Insa01BaseInfo Insa01BaseInfo { get; set; }
+        //public Insa02FamInfo Insa02FamInfo { get; set; }
+        //public Insa03EduInfo Insa03EduInfo { get; set; }
+        //public Insa04AwardInfo Insa04AwardInfo { get; set; }
+        //public Insa05CarInfo Insa05CarInfo { get; set; }
+        //public Insa06LicInfo Insa06LicInfo { get; set; }
+        //public Insa07ForlInfo Insa07ForlInfo { get; set; }
+        
         DBOracle_Helper oHelper;
 
         int tabPageNum;
@@ -62,6 +70,125 @@ namespace insaSystem
             frm_load(new Insa07ForlInfo());
             #endregion
         }
+
+        public string getData;
+        //수정 및 connection 필요함
+        #region 사번테이블 EVENT CellMouseDoubleClick -- 통합
+        //인사기본 데이터 테이블 정보 더블클릭시 데이터 가져가기
+        private void sabunDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Insa01BaseInfo Insa01BaseInfo = new Insa01BaseInfo();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.sabunDataGridView.Rows[e.RowIndex];
+                getData = row.Cells["bas_empno"].Value.ToString();
+                IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
+                form.InsaManagement = this;
+                form.DataGridView_Double_clicked();
+            }
+
+            ////가족사항
+            //if (tabControl1.SelectedTab.TabIndex == 1)
+            //{
+            //    DataGridViewRow row = this.sabunDataGridView.Rows[e.RowIndex];
+
+            //    bas_empno_fam.Text = row.Cells["bas_empno"].Value.ToString();
+            //    bas_name_fam.Text = row.Cells["bas_name"].Value.ToString();
+            //    bas_pos_fam.Text = row.Cells["cd_codnms"].Value.ToString(); ;
+            //    bas_dept_fam.Text = row.Cells["dept_name"].Value.ToString();
+
+            //    famDataGridView.Rows.Clear();
+            //    string searchsql = " select fam_codnms as fam_rel, fam_name, fam_bth, fam_ltg" +
+            //                       " from  thrm_bas_psy,       " +
+            //                       "       thrm_fam_psy," +
+            //                       "       (select cd_grpcd, cd_code, cd_codnms as fam_codnms " +
+            //                       "       from  tieas_cd_psy where cd_grpcd = 'REL') " +
+            //                       " where bas_empno = fam_empno(+) and fam_rel = cd_code" +
+            //                       " and bas_empno = '" + bas_empno_fam.Text + "'";
+            //    try
+            //    {
+            //        OracleCommand cmd = new OracleCommand();
+            //        cmd.Connection = pgOraConn;
+            //        cmd.CommandText = searchsql;
+            //        OracleDataReader rd2 = cmd.ExecuteReader();
+
+            //        int cnt = 0;
+            //        while (rd2.Read())
+            //        {
+            //            famDataGridView.Rows.Add(rd2["fam_rel"].ToString(), rd2["fam_name"].ToString(), rd2["fam_bth"].ToString(), rd2["fam_ltg"].ToString());
+            //            cnt++;
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.ToString());
+            //    }
+            //}
+
+            ////학력사항
+            //else if (tabControl1.SelectedTab.TabIndex == 2)
+            //{
+            //    DataGridViewRow row = this.sabunDataGridView.Rows[e.RowIndex];
+
+            //    bas_empno_edu.Text = row.Cells["bas_empno"].Value.ToString();
+            //    bas_name_edu.Text = row.Cells["bas_name"].Value.ToString();
+            //    bas_pos_edu.Text = row.Cells["cd_codnms"].Value.ToString(); ;
+            //    bas_dept_edu.Text = row.Cells["dept_name"].Value.ToString();
+
+            //    DateTimePicker dtp = new DateTimePicker();//해결필요함 
+
+            //    eduDataGridView.Rows.Clear();
+            //    string searchsql = " select edu_empno, edu_loe, edu_endate, edu_gradate, edu_schnm, edu_dept, edu_degree, edu_grade, edu_gra, edu_last" +
+            //                       " from  thrm_bas_psy," +
+            //                       "       thrm_edu_psy" +
+            //                       " where bas_empno = edu_empno(+) " +
+            //                       " and bas_empno = '" + bas_empno_edu.Text + "'";
+            //    MessageBox.Show("123123");
+            //    try
+            //    {
+            //        OracleCommand cmd = new OracleCommand();
+            //        cmd.Connection = pgOraConn;
+            //        cmd.CommandText = searchsql;
+            //        OracleDataReader rd3 = cmd.ExecuteReader();
+
+            //        int cnt = 0;
+            //        while (rd3.Read())
+            //        {
+            //            eduDataGridView.Rows.Add(rd3["edu_loe"].ToString(), rd3["edu_endate"].ToString(), rd3["edu_gradate"].ToString(), rd3["edu_schrm"].ToString(), rd3["edu_dept"].ToString(), rd3["edu_degree"].ToString(), rd3["edu_grade"].ToString(), rd3["edu_gra"].ToString());
+            //            cnt++;
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.ToString());
+            //    }
+            //}
+
+            ////상벌이력
+            //else if (tabControl1.SelectedTab.TabIndex == 3)
+            //{
+
+            //}
+
+            ////경력사항
+            //else if (tabControl1.SelectedTab.TabIndex == 4)
+            //{
+
+            //}
+
+            ////자격면허
+            //else if (tabControl1.SelectedTab.TabIndex == 5)
+            //{
+
+            //}
+
+            ////외국어
+            //else if (tabControl1.SelectedTab.TabIndex == 6)
+            //{
+
+            //}
+        }
+        #endregion
         //시스템 state control
         #region 나가기, 최대화, 리스토어, 최소화 Btn Control
         //-----------나가기----------
@@ -141,7 +268,7 @@ namespace insaSystem
         private void insertbtn_Click(object sender, EventArgs e)
         {
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
-            form.MainForm = this;
+            form.InsaManagement = this;
             form.Btn_insert_clicked();
             BtnCotrol();
         }
@@ -149,7 +276,7 @@ namespace insaSystem
         private void updatebtn_Click(object sender, EventArgs e)
         {
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
-            form.MainForm = this;
+            form.InsaManagement = this;
             form.Btn_update_clicked();
             BtnCotrol();
         }
@@ -157,7 +284,7 @@ namespace insaSystem
         private void deletebtn_Click(object sender, EventArgs e)
         {
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
-            form.MainForm = this;
+            form.InsaManagement = this;
             form.Btn_delete_clicked();
             BtnCotrol();
         }
@@ -165,7 +292,7 @@ namespace insaSystem
         private void checkbtn_Click(object sender, EventArgs e)
         {
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
-            form.MainForm = this;
+            form.InsaManagement = this;
             form.Btn_check_clicked();
             MessageBox.Show(Mode);
             BtnCotrol();
@@ -174,7 +301,7 @@ namespace insaSystem
         private void cancelbtn_Click(object sender, EventArgs e)
         {
             IForm form = (IForm)tabControl1.SelectedTab.Controls[0];
-            form.MainForm = this;
+            form.InsaManagement = this;
             form.Btn_cancel_clicked();
             BtnCotrol();
         }
@@ -229,7 +356,6 @@ namespace insaSystem
                 Mode = "";
             }
         }
-
 
     }
 }

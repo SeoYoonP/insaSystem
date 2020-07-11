@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.bas_dept_edu = new Bunifu.Framework.BunifuCustomTextbox();
             this.bas_pos_edu = new Bunifu.Framework.BunifuCustomTextbox();
@@ -400,30 +400,30 @@
             // 
             // eduDataGridView
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.eduDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.eduDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.eduDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.eduDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.eduDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.eduDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.eduDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.eduDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.eduDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.eduDataGridView.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.eduDataGridView.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.eduDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.eduDataGridView.DoubleBuffered = true;
             this.eduDataGridView.EnableHeadersVisualStyles = false;
             this.eduDataGridView.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
@@ -461,13 +461,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox19;
-        private Bunifu.Framework.BunifuCustomTextbox bas_dept_edu;
-        private Bunifu.Framework.BunifuCustomTextbox bas_pos_edu;
-        private Bunifu.Framework.BunifuCustomTextbox bas_name_edu;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel61;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel62;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel63;
-        private Bunifu.Framework.BunifuCustomTextbox bas_empno_edu;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel64;
         private System.Windows.Forms.DateTimePicker edu_gradate;
         private System.Windows.Forms.DateTimePicker edu_entdate;
@@ -489,5 +485,9 @@
         private System.Windows.Forms.GroupBox groupBox20;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel77;
         private Bunifu.Framework.UI.BunifuCustomDataGrid eduDataGridView;
+        public Bunifu.Framework.BunifuCustomTextbox bas_dept_edu;
+        public Bunifu.Framework.BunifuCustomTextbox bas_pos_edu;
+        public Bunifu.Framework.BunifuCustomTextbox bas_name_edu;
+        public Bunifu.Framework.BunifuCustomTextbox bas_empno_edu;
     }
 }

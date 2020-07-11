@@ -15,8 +15,17 @@ namespace insaSystem
     {
         DBOracle_Helper oHelper;
         public InsaManagement InsaManagement { get; set; }
-        string bas_mar = "";
+        public Insa02FamInfo Insa02FamInfo { get; set; }
+        public Insa03EduInfo Insa03EduInfo { get; set; }
+        public Insa04AwardInfo Insa04AwardInfo { get; set; }
+        public Insa05CarInfo Insa05CarInfo { get; set; }
+        public Insa06LicInfo Insa06LicInfo { get; set; }
+        public Insa07ForlInfo Insa07ForlInfo { get; set; }
 
+
+
+        string bas_mar = "";
+        int num = 0;
         public Insa01BaseInfo()
         {
             InitializeComponent();
@@ -28,23 +37,214 @@ namespace insaSystem
             InsabaseEnableFalse();
         }
 
+        public void DataGridView_Double_clicked()
+        {
+
+            //CallingEmployeeInfo();
+            bas_empno.Text = InsaManagement.getData.ToString();
+            string sql = "select bas_empno,bas_resno,bas_name,bas_cname,bas_ename,bas_fix,bas_zip,bas_addr,bas_residence,bas_hdpno,bas_telno,bas_email,bas_mil_sta,bas_mil_mil,bas_mil_rnk,bas_mar,bas_acc_bank1,bas_acc_name1,bas_acc_no1,bas_acc_bank2,bas_acc_name2,bas_acc_no2,bas_cont,bas_intern,bas_intern_no,bas_emp_sdate,bas_emp_edate,bas_entdate,bas_resdate,bas_levdate,bas_reidate,bas_wsta,(bas_sts ||':'|| cd_codnms) as bas_sts,(bas_pos ||':'|| pos_codnms) as bas_pos ,(bas_dut ||':'|| dut_codnms) as bas_dut, (bas_dept ||':'||dept_name) as bas_dept,bas_rmk,bas_pos_dt,bas_dut_dt,bas_dept_dt,bas_intern_dt " +
+                "from" +
+                " thrm_bas_psy,(select cd_code, cd_codnms from tieas_cd_psy where cd_grpcd = 'STS')," +
+                "(select cd_code as pos_code, cd_codnms as pos_codnms from tieas_cd_psy where cd_grpcd = 'POS')," +
+                "(select cd_code as dut_code, cd_codnms as dut_codnms from tieas_cd_psy where cd_grpcd = 'DUT')," +
+                " thrm_dept_psy" +
+                " where" +
+                " bas_sts =cd_code and bas_pos =pos_code and bas_dut = dut_code(+) and bas_empno='" + bas_empno.Text + "'";
+
+            DataTable SabunInfo = oHelper.GetData(sql);
+            foreach (DataRow Row in SabunInfo.Rows)
+            {
+                //if (bas_empno.Text != null)
+                //{
+                if (Row != null)
+                {
+                    String date_emp_sdate, date_emp_sdate_print;
+                    String date_emp_edate, date_emp_edate_print;
+                    String date_entdate, date_entdate_print;
+                    String date_resdate, date_resdate_print;
+                    String date_levdate, date_levdate_print;
+                    String date_reidate, date_reidate_print;
+                    String date_pos_dt, date_pos_dt_print;
+                    String date_dut_dt, date_dut_dt_print;
+                    String date_dept_dt, date_dept_dt_print;
+                    String date_intern_dt, date_intern_dt_print;
+                    String aa;
+
+                    string putin = Row["bas_dept"].ToString();
+                    string[] dept = putin.Split(':');
+
+                    if (Row["bas_emp_sdate"] as string != null)
+                    {
+                        date_emp_sdate = Row["bas_emp_sdate"] as string;
+                        date_emp_sdate_print = date_emp_sdate.Substring(0, 4) + "-" + date_emp_sdate.Substring(4, 2) + "-" + date_emp_sdate.Substring(6, 2);
+                        bas_emp_sdate.Text = date_emp_sdate_print;
+                        MessageBox.Show(date_emp_sdate_print);
+                    }
+                    else
+                    {
+                        bas_emp_sdate.Format = DateTimePickerFormat.Custom;
+                        MessageBox.Show(bas_emp_sdate.ToString());
+                    }
+
+                    if (Row["bas_emp_edate"] as string != null)
+                    {
+                        date_emp_edate = Row["bas_emp_edate"] as string;
+                        date_emp_edate_print = date_emp_edate.Substring(0, 4) + "-" + date_emp_edate.Substring(4, 2) + "-" + date_emp_edate.Substring(6, 2);
+                        bas_emp_edate.Text = date_emp_edate_print;
+                    }
+                    else
+                    {
+                        bas_emp_edate.Format = DateTimePickerFormat.Custom;
+                    }
+
+                    if (Row["bas_entdate"] as string != null)
+                    {
+                        date_entdate = Row["bas_entdate"] as string;
+                        date_entdate_print = date_entdate.Substring(0, 4) + "-" + date_entdate.Substring(4, 2) + "-" + date_entdate.Substring(6, 2);
+                        bas_entdate.Text = date_entdate_print;
+                    }
+                    else
+                    {
+                        bas_entdate.Format = DateTimePickerFormat.Custom;
+                    }
+
+                    if (!string.IsNullOrEmpty(Row["bas_resdate"] as string))
+                    {
+                        date_resdate = Row["bas_resdate"] as string;
+                        date_resdate_print = date_resdate.Substring(0, 4) + "-" + date_resdate.Substring(4, 2) + "-" + date_resdate.Substring(6, 2);
+                        bas_resdate.Text = date_resdate_print;
+                    }
+                    else
+                    {
+                        bas_resdate.Format = DateTimePickerFormat.Custom;
+                    }
+
+                    if (Row["bas_levdate"] as string != null)
+                    {
+                        date_levdate = Row["bas_levdate"] as string;
+                        date_levdate_print = date_levdate.Substring(0, 4) + "-" + date_levdate.Substring(4, 2) + "-" + date_levdate.Substring(6, 2);
+                        bas_levdate.Text = date_levdate_print;
+                    }
+                    else
+                    {
+                        bas_levdate.Format = DateTimePickerFormat.Custom;
+                    }
+
+                    if (Row["bas_reidate"] as string != null)
+                    {
+                        date_reidate = Row["bas_reidate"] as string;
+                        date_reidate_print = date_reidate.Substring(0, 4) + "-" + date_reidate.Substring(4, 2) + "-" + date_reidate.Substring(6, 2);
+                        bas_reidate.Text = date_reidate_print;
+                    }
+                    else
+                    {
+                        bas_reidate.Format = DateTimePickerFormat.Custom;
+                    }
+
+                    if (Row["bas_pos_dt"] as string != null)
+                    {
+                        date_pos_dt = Row["bas_pos_dt"] as string;
+                        date_pos_dt_print = date_pos_dt.Substring(0, 4) + "-" + date_pos_dt.Substring(4, 2) + "-" + date_pos_dt.Substring(6, 2);
+                        bas_pos_dt.Text = date_pos_dt_print;
+                    }
+                    else
+                    {
+                        bas_pos_dt.Format = DateTimePickerFormat.Custom;
+                    }
+
+                    if (Row["bas_dut_dt"] as string != null)
+                    {
+                        date_dut_dt = Row["bas_dut_dt"] as string;
+                        date_dut_dt_print = date_dut_dt.Substring(0, 4) + "-" + date_dut_dt.Substring(4, 2) + "-" + date_dut_dt.Substring(6, 2);
+                        bas_dut_dt.Text = date_dut_dt_print;
+                    }
+                    else
+                    {
+                        bas_dut_dt.Format = DateTimePickerFormat.Custom;
+                    }
+
+                    if (Row["bas_dept_dt"] as string != null)
+                    {
+                        date_dept_dt = Row["bas_dept_dt"] as string;
+                        date_dept_dt_print = date_dept_dt.Substring(0, 4) + "-" + date_dept_dt.Substring(4, 2) + "-" + date_dept_dt.Substring(6, 2);
+                        bas_dept_dt.Text = date_dept_dt_print;
+                    }
+                    else
+                    {
+                        bas_dept_dt.Format = DateTimePickerFormat.Custom;
+                    }
+
+                    if (Row["bas_intern_dt"] as string != null)
+                    {
+                        date_intern_dt = Row["bas_intern_dt"] as string;
+                        date_intern_dt_print = date_intern_dt.Substring(0, 4) + "-" + date_intern_dt.Substring(4, 2) + "-" + date_intern_dt.Substring(6, 2);
+                        bas_intern_dt.Text = date_intern_dt_print;
+                    }
+                    else
+                    {
+                        bas_intern_dt.Format = DateTimePickerFormat.Custom;
+                    }
+                    bas_empno.Text = Row["bas_empno"] as string;
+                    bas_resno.Text = Row["bas_resno"] as string;
+                    bas_name.Text = Row["bas_name"] as string;
+                    bas_cname.Text = Row["bas_cname"] as string;
+                    bas_ename.Text = Row["bas_ename"] as string;
+                    bas_fix.Text = Row["bas_fix"] as string;
+                    bas_zip.Text = Row["bas_zip"] as string;
+                    bas_addr.Text = Row["bas_addr"] as string;
+                    bas_residence.Text = Row["bas_residence"] as string;
+                    bas_hdpno.Text = Row["bas_hdpno"] as string;
+                    bas_telno.Text = Row["bas_telno"] as string;
+                    bas_email.Text = Row["bas_email"] as string;
+                    bas_mil_sta.Text = Row["bas_mil_sta"] as string;
+                    bas_mil_mil.Text = Row["bas_mil_mil"] as string;
+                    bas_mil_rnk.Text = Row["bas_mil_rnk"] as string;
+                    bas_mar = Row["bas_mar"] as string;
+                    bas_acc_bank1.Text = Row["bas_acc_bank1"] as string;
+                    bas_acc_name1.Text = Row["bas_acc_name1"] as string;
+                    bas_acc_no1.Text = Row["bas_acc_no1"] as string;
+                    bas_acc_bank2.Text = Row["bas_acc_bank2"] as string;
+                    bas_acc_name2.Text = Row["bas_acc_name2"] as string;
+                    bas_acc_no2.Text = Row["bas_acc_no2"] as string;
+                    bas_cont.Text = Row["bas_cont"] as string;
+                    bas_intern.Text = Row["bas_intern"] as string;
+                    bas_intern_no.Text = Row["bas_intern_no"] as string;
+                    bas_wsta.Text = Row["bas_wsta"] as string;
+                    bas_sts.Text = Row["bas_sts"] as string;
+                    bas_pos.Text = Row["bas_pos"] as string;
+                    bas_dut.Text = Row["bas_dut"] as string;
+                    bas_dept_code.Text = dept[0].ToString();
+                    bas_dept.Text = dept[1].ToString();
+                    bas_rmk.Text = Row["bas_rmk"] as string;
+
+                    aa = Row["bas_mar"] as string;
+
+                    if (aa == "기혼")
+                    {
+                        bas_mar2.Checked = true;
+                    }
+                    else
+                    {
+                        bas_mar1.Checked = true;
+                    }
+                }
+            }
+        }
+
         public void Btn_insert_clicked()
         {
+            InsabaseEnableTrue();
             TextboxClear();
             bas_empno.Focus();
+            BtnCheck.Text = "I";
+            //insamanagement.btncheck.text = this.btncheck.text;
             MessageBox.Show("인사기본사항 입력을 시작합니다.");
-
-            //this.BackColor = Color.LightGray;
-            //this.textBox1.Text = InsaManagement.textBox1.Text;
         }
 
         public void Btn_update_clicked()
         {
             CallingEmployeeInfo();
             BtnCheck.Text = "U";
-            InsaManagement.btncheck.Text = this.BtnCheck.Text;
-            //InsaManagement.Mode = "";
-
         }
 
         public void Btn_delete_clicked()
@@ -52,14 +252,10 @@ namespace insaSystem
             CallingEmployeeInfo();
             BtnCheck.Text = "D";
             InsabaseEnableFalse();
-            InsaManagement.btncheck.Text = this.BtnCheck.Text;
-            //InsaManagement.Mode = "";
         }
 
         public void Btn_check_clicked()
         {
-            int num = 0;
-
             string result = bas_mil_mil.Text;
             string[] mil = result.Split(':');
 
@@ -84,7 +280,57 @@ namespace insaSystem
             result = bas_dept.Text;
             string[] dept = result.Split(':');
 
-            if (InsaManagement.btncheck.Text == "U")
+            if (BtnCheck.Text == "I")
+            {
+                int num = 0;
+                if (MessageBox.Show("정보를 입력하시겠습니까?", "정보저장", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    ValidationChecking();
+                    if (num == 1)
+                    {
+                        return;
+                    }
+                    if (bas_mar1.Checked == true)
+                    {
+                        bas_mar = "미혼";
+                    }
+                    else if (bas_mar2.Checked == true)
+                    {
+                        bas_mar = "기혼";
+                    }
+                    string SqlInsert = $"insert into THRM_BAS_PSY(bas_empno, bas_resno, bas_name, bas_cname, bas_ename," +
+                        $" bas_pos, bas_dut, bas_cont,bas_intern, bas_wsta, bas_sts, bas_zip, bas_addr, bas_residence, bas_email," +
+                        $"bas_hdpno, bas_telno, bas_mil_mil, bas_mil_sta, bas_mil_rnk,bas_acc_bank1, bas_acc_name1," +
+                        $" bas_acc_no1, bas_acc_bank2,bas_acc_name2, bas_acc_no2, bas_rmk,bas_fix,bas_mar," +
+                        $"bas_dept,bas_entdate,bas_emp_sdate,bas_emp_edate,bas_intern_dt) values('" + bas_empno.Text + "','" + bas_resno.Text + "', '" + bas_name.Text + "','"
+                        + bas_cname.Text + "','" + bas_ename.Text + "','" + pos[0] + "','" + dut[0] + "','"
+                        + bas_cont.Text + "','" + bas_intern.Text + "','" + bas_wsta.Text + "', '" + sts[0] + "','" + bas_zip.Text + "','"
+                        + bas_addr.Text + "', '"
+                        + bas_residence.Text + "', '" + bas_email.Text + "','" + bas_hdpno.Text + "','" + bas_hdpno.Text + "','" + mil[0]
+                        + "','" + bas_mil_sta.Text + "','" + rnk[0] + "','" + bank1[0] + "','" +
+                        bas_acc_name1.Text + "','" + bas_acc_no1.Text + "','" + bank2[0] + "','" +
+                        bas_acc_name2.Text + "','" + bas_acc_no2.Text + "','" + bas_rmk.Text + "','" + bas_fix.Text + "','" + bas_mar +
+                        "','" + bas_dept_code.Text + "','" + bas_entdate.Value.ToString("yyyyMMdd") + "'," +
+                        "'" + bas_emp_sdate.Value.ToString("yyyyMMdd") + "','" + bas_emp_edate.Value.ToString("yyyyMMdd")
+                        + "','" + bas_intern_dt.Value.ToString("yyyyMMdd") + "')";
+
+                    oHelper.SetData(SqlInsert);
+
+                    TextboxClear();
+                    InsabaseEnableFalse();
+                    MessageBox.Show("저장되었습니다.");
+                    InsaManagement.Mode = "BlockCC";
+                }
+
+                else
+                {
+                    bas_empno.Focus();
+                    InsaManagement.Mode = "BlockIUD";
+                }
+            }
+
+
+            if (BtnCheck.Text == "U")
             {
                 if (MessageBox.Show("수정하시겠습니까?", "수정", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -139,7 +385,7 @@ namespace insaSystem
                 }
             }
 
-            if (InsaManagement.btncheck.Text == "D")
+            if (BtnCheck.Text == "D")
             {
                 if (MessageBox.Show("삭제하시겠습니까?", "삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -164,7 +410,7 @@ namespace insaSystem
 
         public void Btn_cancel_clicked()
         {
-            if (InsaManagement.btncheck.Text == "I")
+            if (BtnCheck.Text == "I")
             {
                 if (MessageBox.Show("취소하시면 입력하신 정보가 모두 저장되지 않습니다. 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -182,7 +428,7 @@ namespace insaSystem
                 InsaManagement.Mode = "BlockCC";
             }
 
-            if (InsaManagement.btncheck.Text == "U")
+            if (BtnCheck.Text == "U")
             {
                 if (MessageBox.Show("수정을 취소합니다.", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -200,7 +446,7 @@ namespace insaSystem
                 InsaManagement.Mode = "BlockCC";
             }
 
-            if (InsaManagement.btncheck.Text == "D")
+            if (BtnCheck.Text == "D")
             {
                 if (MessageBox.Show("데이터 삭제가 취소되었습니다 . 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -549,7 +795,6 @@ namespace insaSystem
                 {
                     bas_mar1.Checked = true;
                 }
-                continue;
             }
         }//수정필요
 
@@ -956,5 +1201,78 @@ namespace insaSystem
             }
         }
         #endregion
+
+        #region 인사기본사항에서 데이터 불러올시 인사기본사항 외 페이지들에 인사 기본값 넣는 함수 -- 통합
+        private void print_workersInformation()
+        {
+            //인사기본사항 외에 사원정보 출력
+            Insa02FamInfo.bas_empno_fam.Text = this.bas_empno.Text;
+            Insa02FamInfo.bas_name_fam.Text = bas_name.Text;
+            Insa02FamInfo.bas_pos_fam.Text = bas_pos.Text.Substring(4);
+            Insa02FamInfo.bas_dept_fam.Text = bas_dept.Text;
+
+            Insa03EduInfo.bas_empno_edu.Text = bas_empno.Text;
+            Insa03EduInfo.bas_name_edu.Text = bas_name.Text;
+            Insa03EduInfo.bas_pos_edu.Text = bas_pos.Text.Substring(4);
+            Insa03EduInfo.bas_dept_edu.Text = bas_dept.Text;
+
+            Insa04AwardInfo.bas_empno_award.Text = bas_empno.Text;
+            Insa04AwardInfo.bas_name_award.Text = bas_name.Text;
+            Insa04AwardInfo.bas_pos_award.Text = bas_pos.Text.Substring(4);
+            Insa04AwardInfo.bas_dept_award.Text = bas_dept.Text;
+
+            Insa05CarInfo.bas_empno_car.Text = bas_empno.Text;
+            Insa05CarInfo.bas_name_car.Text = bas_name.Text;
+            Insa05CarInfo.bas_pos_car.Text = bas_pos.Text.Substring(4);
+            Insa05CarInfo.bas_dept_car.Text = bas_dept.Text;
+
+            Insa06LicInfo.bas_empno_lic.Text = bas_empno.Text;
+            Insa06LicInfo.bas_name_lic.Text = bas_name.Text;
+            Insa06LicInfo.bas_pos_lic.Text = bas_pos.Text.Substring(4);
+            Insa06LicInfo.bas_dept_lic.Text = bas_dept.Text;
+
+            Insa07ForlInfo.bas_empno_forl.Text = bas_empno.Text;
+            Insa07ForlInfo.bas_name_forl.Text = bas_name.Text;
+            Insa07ForlInfo.bas_pos_forl.Text = bas_pos.Text.Substring(4);
+            Insa07ForlInfo.bas_dept_forl.Text = bas_dept.Text;
+
+
+            Insa02FamInfo.bas_empno_fam.Enabled = false;
+            Insa02FamInfo.bas_name_fam.Enabled = false;
+            Insa02FamInfo.bas_pos_fam.Enabled = false;
+            Insa02FamInfo.bas_dept_fam.Enabled = false;
+
+            Insa03EduInfo.bas_empno_edu.Enabled = false;
+            Insa03EduInfo.bas_name_edu.Enabled = false;
+            Insa03EduInfo.bas_pos_edu.Enabled = false;
+            Insa03EduInfo.bas_dept_edu.Enabled = false;
+
+            Insa04AwardInfo.bas_empno_award.Enabled = false;
+            Insa04AwardInfo.bas_name_award.Enabled = false;
+            Insa04AwardInfo.bas_pos_award.Enabled = false;
+            Insa04AwardInfo.bas_dept_award.Enabled = false;
+
+            Insa05CarInfo.bas_empno_car.Enabled = false;
+            Insa05CarInfo.bas_name_car.Enabled = false;
+            Insa05CarInfo.bas_pos_car.Enabled = false;
+            Insa05CarInfo.bas_dept_car.Enabled = false;
+
+            Insa06LicInfo.bas_empno_lic.Enabled = false;
+            Insa06LicInfo.bas_name_lic.Enabled = false;
+            Insa06LicInfo.bas_pos_lic.Enabled = false;
+            Insa06LicInfo.bas_dept_lic.Enabled = false;
+
+            Insa07ForlInfo.bas_empno_forl.Enabled = false;
+            Insa07ForlInfo.bas_name_forl.Enabled = false;
+            Insa07ForlInfo.bas_pos_forl.Enabled = false;
+            Insa07ForlInfo.bas_dept_forl.Enabled = false;
+        }
+
+        #endregion
+
+        private void BtnCheck_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

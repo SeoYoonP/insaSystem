@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel108 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel110 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bas_dept_lic = new Bunifu.Framework.BunifuCustomTextbox();
@@ -40,13 +40,13 @@
             this.bunifuCustomLabel104 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel105 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bas_empno_lic = new Bunifu.Framework.BunifuCustomTextbox();
-            this.bunifuCustomTextbox54 = new Bunifu.Framework.BunifuCustomTextbox();
-            this.bunifuCustomTextbox55 = new Bunifu.Framework.BunifuCustomTextbox();
+            this.lic_grade = new Bunifu.Framework.BunifuCustomTextbox();
+            this.lic_code = new Bunifu.Framework.BunifuCustomTextbox();
             this.bunifuCustomLabel107 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel106 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.dateTimePicker23 = new System.Windows.Forms.DateTimePicker();
+            this.lic_acqdate = new System.Windows.Forms.DateTimePicker();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.bunifuCustomTextbox53 = new Bunifu.Framework.BunifuCustomTextbox();
+            this.lic_organ = new Bunifu.Framework.BunifuCustomTextbox();
             this.bunifuCustomLabel109 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.licDataGridView = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -149,25 +149,25 @@
             this.bas_empno_lic.Size = new System.Drawing.Size(70, 27);
             this.bas_empno_lic.TabIndex = 42;
             // 
-            // bunifuCustomTextbox54
+            // lic_grade
             // 
-            this.bunifuCustomTextbox54.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox54.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox54.Location = new System.Drawing.Point(213, 82);
-            this.bunifuCustomTextbox54.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox54.Name = "bunifuCustomTextbox54";
-            this.bunifuCustomTextbox54.Size = new System.Drawing.Size(165, 27);
-            this.bunifuCustomTextbox54.TabIndex = 65;
+            this.lic_grade.BorderColor = System.Drawing.Color.SeaGreen;
+            this.lic_grade.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lic_grade.Location = new System.Drawing.Point(213, 82);
+            this.lic_grade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lic_grade.Name = "lic_grade";
+            this.lic_grade.Size = new System.Drawing.Size(165, 27);
+            this.lic_grade.TabIndex = 65;
             // 
-            // bunifuCustomTextbox55
+            // lic_code
             // 
-            this.bunifuCustomTextbox55.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox55.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox55.Location = new System.Drawing.Point(213, 41);
-            this.bunifuCustomTextbox55.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox55.Name = "bunifuCustomTextbox55";
-            this.bunifuCustomTextbox55.Size = new System.Drawing.Size(165, 27);
-            this.bunifuCustomTextbox55.TabIndex = 64;
+            this.lic_code.BorderColor = System.Drawing.Color.SeaGreen;
+            this.lic_code.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lic_code.Location = new System.Drawing.Point(213, 41);
+            this.lic_code.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lic_code.Name = "lic_code";
+            this.lic_code.Size = new System.Drawing.Size(165, 27);
+            this.lic_code.TabIndex = 64;
             // 
             // bunifuCustomLabel107
             // 
@@ -189,24 +189,24 @@
             this.bunifuCustomLabel106.TabIndex = 32;
             this.bunifuCustomLabel106.Text = "사원번호";
             // 
-            // dateTimePicker23
+            // lic_acqdate
             // 
-            this.dateTimePicker23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker23.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker23.Location = new System.Drawing.Point(480, 41);
-            this.dateTimePicker23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker23.Name = "dateTimePicker23";
-            this.dateTimePicker23.Size = new System.Drawing.Size(165, 27);
-            this.dateTimePicker23.TabIndex = 129;
-            this.dateTimePicker23.TabStop = false;
+            this.lic_acqdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lic_acqdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.lic_acqdate.Location = new System.Drawing.Point(480, 41);
+            this.lic_acqdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lic_acqdate.Name = "lic_acqdate";
+            this.lic_acqdate.Size = new System.Drawing.Size(165, 27);
+            this.lic_acqdate.TabIndex = 129;
+            this.lic_acqdate.TabStop = false;
             // 
             // groupBox26
             // 
             this.groupBox26.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox26.Controls.Add(this.dateTimePicker23);
-            this.groupBox26.Controls.Add(this.bunifuCustomTextbox53);
-            this.groupBox26.Controls.Add(this.bunifuCustomTextbox54);
-            this.groupBox26.Controls.Add(this.bunifuCustomTextbox55);
+            this.groupBox26.Controls.Add(this.lic_acqdate);
+            this.groupBox26.Controls.Add(this.lic_organ);
+            this.groupBox26.Controls.Add(this.lic_grade);
+            this.groupBox26.Controls.Add(this.lic_code);
             this.groupBox26.Controls.Add(this.bunifuCustomLabel107);
             this.groupBox26.Controls.Add(this.bunifuCustomLabel108);
             this.groupBox26.Controls.Add(this.bunifuCustomLabel109);
@@ -220,15 +220,15 @@
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "자격정보";
             // 
-            // bunifuCustomTextbox53
+            // lic_organ
             // 
-            this.bunifuCustomTextbox53.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox53.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox53.Location = new System.Drawing.Point(480, 82);
-            this.bunifuCustomTextbox53.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox53.Name = "bunifuCustomTextbox53";
-            this.bunifuCustomTextbox53.Size = new System.Drawing.Size(165, 27);
-            this.bunifuCustomTextbox53.TabIndex = 66;
+            this.lic_organ.BorderColor = System.Drawing.Color.SeaGreen;
+            this.lic_organ.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lic_organ.Location = new System.Drawing.Point(480, 82);
+            this.lic_organ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lic_organ.Name = "lic_organ";
+            this.lic_organ.Size = new System.Drawing.Size(165, 27);
+            this.lic_organ.TabIndex = 66;
             // 
             // bunifuCustomLabel109
             // 
@@ -262,30 +262,30 @@
             // 
             // licDataGridView
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.licDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.licDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.licDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.licDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.licDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.licDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.licDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.licDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.licDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.licDataGridView.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.licDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.licDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.licDataGridView.DoubleBuffered = true;
             this.licDataGridView.EnableHeadersVisualStyles = false;
             this.licDataGridView.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
@@ -324,22 +324,22 @@
 
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel108;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel110;
-        private Bunifu.Framework.BunifuCustomTextbox bas_dept_lic;
-        private Bunifu.Framework.BunifuCustomTextbox bas_pos_lic;
-        private Bunifu.Framework.BunifuCustomTextbox bas_name_lic;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel103;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel104;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel105;
-        private Bunifu.Framework.BunifuCustomTextbox bas_empno_lic;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox54;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox55;
+        private Bunifu.Framework.BunifuCustomTextbox lic_grade;
+        private Bunifu.Framework.BunifuCustomTextbox lic_code;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel107;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel106;
-        private System.Windows.Forms.DateTimePicker dateTimePicker23;
+        private System.Windows.Forms.DateTimePicker lic_acqdate;
         private System.Windows.Forms.GroupBox groupBox26;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox53;
+        private Bunifu.Framework.BunifuCustomTextbox lic_organ;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel109;
         private System.Windows.Forms.GroupBox groupBox25;
         private Bunifu.Framework.UI.BunifuCustomDataGrid licDataGridView;
+        public Bunifu.Framework.BunifuCustomTextbox bas_dept_lic;
+        public Bunifu.Framework.BunifuCustomTextbox bas_pos_lic;
+        public Bunifu.Framework.BunifuCustomTextbox bas_name_lic;
+        public Bunifu.Framework.BunifuCustomTextbox bas_empno_lic;
     }
 }

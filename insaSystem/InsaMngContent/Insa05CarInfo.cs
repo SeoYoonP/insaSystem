@@ -21,9 +21,37 @@ namespace insaSystem
             InitializeComponent();
         }
 
+        public void DataGridView_Double_clicked()
+        {
+
+        }
+
+        private void TextboxClear()
+        {
+            car_com.Text = "";
+            car_region.Text = "";
+            car_yyyymm_f.Format = DateTimePickerFormat.Custom;
+            car_yyyymm_t.Format = DateTimePickerFormat.Custom;
+            car_pos.Text = "";
+            car_dept.Text = "";
+            car_job.Text = "";
+            car_reason.Text = "";
+
+        }
+
         public void Btn_insert_clicked()
         {
-            MessageBox.Show("경력사항 입력을 시작합니다.");
+            if (bas_empno_car.Text == "")
+            {
+                MessageBox.Show("입력할 사원정보를 선택하세요");
+            }
+            else
+            {
+                TextboxClear();
+                MessageBox.Show("경력사항 입력을 시작합니다.");
+                InsaManagement.btncheck.Text = "C_I";
+                InsaManagement.Mode = "BlockIUD";
+            }
         }
 
         public void Btn_update_clicked()
@@ -44,7 +72,7 @@ namespace insaSystem
 
         public void Btn_cancel_clicked()
         {
-            if (InsaManagement.btncheck.Text == "F_I")
+            if (InsaManagement.btncheck.Text == "C_I")
             {
                 if (MessageBox.Show("취소하시면 입력하신 정보가 모두 저장되지 않습니다. 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -62,7 +90,7 @@ namespace insaSystem
                 InsaManagement.Mode = "BlockCC";
             }
 
-            if (InsaManagement.btncheck.Text == "F_U")
+            if (InsaManagement.btncheck.Text == "C_U")
             {
                 if (MessageBox.Show("수정을 취소합니다.", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -80,7 +108,7 @@ namespace insaSystem
                 InsaManagement.Mode = "BlockCC";
             }
 
-            if (InsaManagement.btncheck.Text == "F_D")
+            if (InsaManagement.btncheck.Text == "C_D")
             {
                 if (MessageBox.Show("데이터 삭제가 취소되었습니다 . 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

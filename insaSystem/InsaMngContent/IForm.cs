@@ -10,6 +10,7 @@ namespace insaSystem
     {
         InsaManagement InsaManagement { get; set; }
         //void Btn_query_clicked();
+        void DataGridView_Double_clicked();
         void Btn_insert_clicked();
         void Btn_update_clicked();
         void Btn_delete_clicked();

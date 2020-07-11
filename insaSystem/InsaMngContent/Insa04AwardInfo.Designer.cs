@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.bas_dept_award = new Bunifu.Framework.BunifuCustomTextbox();
             this.bas_pos_award = new Bunifu.Framework.BunifuCustomTextbox();
@@ -40,15 +40,15 @@
             this.bunifuCustomLabel80 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bas_empno_award = new Bunifu.Framework.BunifuCustomTextbox();
             this.bunifuCustomLabel81 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.dateTimePicker20 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox26 = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomTextbox19 = new Bunifu.Framework.BunifuCustomTextbox();
-            this.bunifuCustomTextbox20 = new Bunifu.Framework.BunifuCustomTextbox();
-            this.bunifuCustomTextbox21 = new Bunifu.Framework.BunifuCustomTextbox();
-            this.bunifuCustomTextbox22 = new Bunifu.Framework.BunifuCustomTextbox();
-            this.comboBox27 = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomTextbox23 = new Bunifu.Framework.BunifuCustomTextbox();
-            this.bunifuCustomTextbox27 = new Bunifu.Framework.BunifuCustomTextbox();
+            this.award_date = new System.Windows.Forms.DateTimePicker();
+            this.award_type = new System.Windows.Forms.ComboBox();
+            this.award_content = new Bunifu.Framework.BunifuCustomTextbox();
+            this.award_dept = new Bunifu.Framework.BunifuCustomTextbox();
+            this.award_pos = new Bunifu.Framework.BunifuCustomTextbox();
+            this.award_organ = new Bunifu.Framework.BunifuCustomTextbox();
+            this.award_inout = new System.Windows.Forms.ComboBox();
+            this.award_kind = new Bunifu.Framework.BunifuCustomTextbox();
+            this.award_no = new Bunifu.Framework.BunifuCustomTextbox();
             this.bunifuCustomLabel82 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel84 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel83 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -169,103 +169,103 @@
             this.bunifuCustomLabel81.TabIndex = 32;
             this.bunifuCustomLabel81.Text = "사원번호";
             // 
-            // dateTimePicker20
+            // award_date
             // 
-            this.dateTimePicker20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker20.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker20.Location = new System.Drawing.Point(114, 114);
-            this.dateTimePicker20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker20.Name = "dateTimePicker20";
-            this.dateTimePicker20.Size = new System.Drawing.Size(177, 27);
-            this.dateTimePicker20.TabIndex = 129;
-            this.dateTimePicker20.TabStop = false;
+            this.award_date.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.award_date.Location = new System.Drawing.Point(114, 114);
+            this.award_date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_date.Name = "award_date";
+            this.award_date.Size = new System.Drawing.Size(177, 27);
+            this.award_date.TabIndex = 129;
+            this.award_date.TabStop = false;
             // 
-            // comboBox26
+            // award_type
             // 
-            this.comboBox26.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox26.FormattingEnabled = true;
-            this.comboBox26.Items.AddRange(new object[] {
+            this.award_type.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_type.FormattingEnabled = true;
+            this.award_type.Items.AddRange(new object[] {
             "내부",
             "외부"});
-            this.comboBox26.Location = new System.Drawing.Point(403, 74);
-            this.comboBox26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox26.Name = "comboBox26";
-            this.comboBox26.Size = new System.Drawing.Size(165, 28);
-            this.comboBox26.TabIndex = 78;
+            this.award_type.Location = new System.Drawing.Point(403, 74);
+            this.award_type.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_type.Name = "award_type";
+            this.award_type.Size = new System.Drawing.Size(165, 28);
+            this.award_type.TabIndex = 78;
             // 
-            // bunifuCustomTextbox19
+            // award_content
             // 
-            this.bunifuCustomTextbox19.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox19.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox19.Location = new System.Drawing.Point(650, 70);
-            this.bunifuCustomTextbox19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox19.Multiline = true;
-            this.bunifuCustomTextbox19.Name = "bunifuCustomTextbox19";
-            this.bunifuCustomTextbox19.Size = new System.Drawing.Size(130, 72);
-            this.bunifuCustomTextbox19.TabIndex = 77;
+            this.award_content.BorderColor = System.Drawing.Color.SeaGreen;
+            this.award_content.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_content.Location = new System.Drawing.Point(650, 70);
+            this.award_content.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_content.Multiline = true;
+            this.award_content.Name = "award_content";
+            this.award_content.Size = new System.Drawing.Size(130, 72);
+            this.award_content.TabIndex = 77;
             // 
-            // bunifuCustomTextbox20
+            // award_dept
             // 
-            this.bunifuCustomTextbox20.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox20.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox20.Location = new System.Drawing.Point(480, 29);
-            this.bunifuCustomTextbox20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox20.Name = "bunifuCustomTextbox20";
-            this.bunifuCustomTextbox20.Size = new System.Drawing.Size(89, 27);
-            this.bunifuCustomTextbox20.TabIndex = 76;
+            this.award_dept.BorderColor = System.Drawing.Color.SeaGreen;
+            this.award_dept.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_dept.Location = new System.Drawing.Point(480, 29);
+            this.award_dept.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_dept.Name = "award_dept";
+            this.award_dept.Size = new System.Drawing.Size(89, 27);
+            this.award_dept.TabIndex = 76;
             // 
-            // bunifuCustomTextbox21
+            // award_pos
             // 
-            this.bunifuCustomTextbox21.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox21.Location = new System.Drawing.Point(289, 29);
-            this.bunifuCustomTextbox21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox21.Name = "bunifuCustomTextbox21";
-            this.bunifuCustomTextbox21.Size = new System.Drawing.Size(89, 27);
-            this.bunifuCustomTextbox21.TabIndex = 75;
+            this.award_pos.BorderColor = System.Drawing.Color.SeaGreen;
+            this.award_pos.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_pos.Location = new System.Drawing.Point(289, 29);
+            this.award_pos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_pos.Name = "award_pos";
+            this.award_pos.Size = new System.Drawing.Size(89, 27);
+            this.award_pos.TabIndex = 75;
             // 
-            // bunifuCustomTextbox22
+            // award_organ
             // 
-            this.bunifuCustomTextbox22.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox22.Location = new System.Drawing.Point(114, 31);
-            this.bunifuCustomTextbox22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox22.Name = "bunifuCustomTextbox22";
-            this.bunifuCustomTextbox22.Size = new System.Drawing.Size(70, 27);
-            this.bunifuCustomTextbox22.TabIndex = 74;
+            this.award_organ.BorderColor = System.Drawing.Color.SeaGreen;
+            this.award_organ.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_organ.Location = new System.Drawing.Point(114, 31);
+            this.award_organ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_organ.Name = "award_organ";
+            this.award_organ.Size = new System.Drawing.Size(70, 27);
+            this.award_organ.TabIndex = 74;
             // 
-            // comboBox27
+            // award_inout
             // 
-            this.comboBox27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox27.FormattingEnabled = true;
-            this.comboBox27.Items.AddRange(new object[] {
+            this.award_inout.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_inout.FormattingEnabled = true;
+            this.award_inout.Items.AddRange(new object[] {
             "내부",
             "외부"});
-            this.comboBox27.Location = new System.Drawing.Point(650, 30);
-            this.comboBox27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox27.Name = "comboBox27";
-            this.comboBox27.Size = new System.Drawing.Size(91, 28);
-            this.comboBox27.TabIndex = 68;
+            this.award_inout.Location = new System.Drawing.Point(650, 30);
+            this.award_inout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_inout.Name = "award_inout";
+            this.award_inout.Size = new System.Drawing.Size(91, 28);
+            this.award_inout.TabIndex = 68;
             // 
-            // bunifuCustomTextbox23
+            // award_kind
             // 
-            this.bunifuCustomTextbox23.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox23.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox23.Location = new System.Drawing.Point(403, 114);
-            this.bunifuCustomTextbox23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox23.Name = "bunifuCustomTextbox23";
-            this.bunifuCustomTextbox23.Size = new System.Drawing.Size(165, 27);
-            this.bunifuCustomTextbox23.TabIndex = 66;
+            this.award_kind.BorderColor = System.Drawing.Color.SeaGreen;
+            this.award_kind.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_kind.Location = new System.Drawing.Point(403, 114);
+            this.award_kind.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_kind.Name = "award_kind";
+            this.award_kind.Size = new System.Drawing.Size(165, 27);
+            this.award_kind.TabIndex = 66;
             // 
-            // bunifuCustomTextbox27
+            // award_no
             // 
-            this.bunifuCustomTextbox27.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox27.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox27.Location = new System.Drawing.Point(114, 72);
-            this.bunifuCustomTextbox27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox27.Name = "bunifuCustomTextbox27";
-            this.bunifuCustomTextbox27.Size = new System.Drawing.Size(177, 27);
-            this.bunifuCustomTextbox27.TabIndex = 65;
+            this.award_no.BorderColor = System.Drawing.Color.SeaGreen;
+            this.award_no.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.award_no.Location = new System.Drawing.Point(114, 72);
+            this.award_no.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.award_no.Name = "award_no";
+            this.award_no.Size = new System.Drawing.Size(177, 27);
+            this.award_no.TabIndex = 65;
             // 
             // bunifuCustomLabel82
             // 
@@ -350,15 +350,15 @@
             // groupBox22
             // 
             this.groupBox22.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox22.Controls.Add(this.dateTimePicker20);
-            this.groupBox22.Controls.Add(this.comboBox26);
-            this.groupBox22.Controls.Add(this.bunifuCustomTextbox19);
-            this.groupBox22.Controls.Add(this.bunifuCustomTextbox20);
-            this.groupBox22.Controls.Add(this.bunifuCustomTextbox21);
-            this.groupBox22.Controls.Add(this.bunifuCustomTextbox22);
-            this.groupBox22.Controls.Add(this.comboBox27);
-            this.groupBox22.Controls.Add(this.bunifuCustomTextbox23);
-            this.groupBox22.Controls.Add(this.bunifuCustomTextbox27);
+            this.groupBox22.Controls.Add(this.award_date);
+            this.groupBox22.Controls.Add(this.award_type);
+            this.groupBox22.Controls.Add(this.award_content);
+            this.groupBox22.Controls.Add(this.award_dept);
+            this.groupBox22.Controls.Add(this.award_pos);
+            this.groupBox22.Controls.Add(this.award_organ);
+            this.groupBox22.Controls.Add(this.award_inout);
+            this.groupBox22.Controls.Add(this.award_kind);
+            this.groupBox22.Controls.Add(this.award_no);
             this.groupBox22.Controls.Add(this.bunifuCustomLabel82);
             this.groupBox22.Controls.Add(this.bunifuCustomLabel83);
             this.groupBox22.Controls.Add(this.bunifuCustomLabel84);
@@ -389,30 +389,30 @@
             // 
             // awardDataGridView
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.awardDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.awardDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.awardDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.awardDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.awardDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.awardDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.awardDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.awardDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.awardDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.awardDataGridView.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.awardDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.awardDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.awardDataGridView.DoubleBuffered = true;
             this.awardDataGridView.EnableHeadersVisualStyles = false;
             this.awardDataGridView.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
@@ -450,23 +450,19 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox21;
-        private Bunifu.Framework.BunifuCustomTextbox bas_dept_award;
-        private Bunifu.Framework.BunifuCustomTextbox bas_pos_award;
-        private Bunifu.Framework.BunifuCustomTextbox bas_name_award;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel78;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel79;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel80;
-        private Bunifu.Framework.BunifuCustomTextbox bas_empno_award;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel81;
-        private System.Windows.Forms.DateTimePicker dateTimePicker20;
-        private System.Windows.Forms.ComboBox comboBox26;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox19;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox20;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox21;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox22;
-        private System.Windows.Forms.ComboBox comboBox27;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox23;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox27;
+        private System.Windows.Forms.DateTimePicker award_date;
+        private System.Windows.Forms.ComboBox award_type;
+        private Bunifu.Framework.BunifuCustomTextbox award_content;
+        private Bunifu.Framework.BunifuCustomTextbox award_dept;
+        private Bunifu.Framework.BunifuCustomTextbox award_pos;
+        private Bunifu.Framework.BunifuCustomTextbox award_organ;
+        private System.Windows.Forms.ComboBox award_inout;
+        private Bunifu.Framework.BunifuCustomTextbox award_kind;
+        private Bunifu.Framework.BunifuCustomTextbox award_no;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel82;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel84;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel83;
@@ -478,5 +474,9 @@
         private System.Windows.Forms.GroupBox groupBox22;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel90;
         private Bunifu.Framework.UI.BunifuCustomDataGrid awardDataGridView;
+        public Bunifu.Framework.BunifuCustomTextbox bas_dept_award;
+        public Bunifu.Framework.BunifuCustomTextbox bas_pos_award;
+        public Bunifu.Framework.BunifuCustomTextbox bas_name_award;
+        public Bunifu.Framework.BunifuCustomTextbox bas_empno_award;
     }
 }

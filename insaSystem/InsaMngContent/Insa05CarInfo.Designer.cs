@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bas_dept_car = new Bunifu.Framework.BunifuCustomTextbox();
             this.bas_name_car = new Bunifu.Framework.BunifuCustomTextbox();
-            this.dateTimePicker21 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker22 = new System.Windows.Forms.DateTimePicker();
-            this.bunifuCustomTextbox45 = new Bunifu.Framework.BunifuCustomTextbox();
-            this.comboBox28 = new System.Windows.Forms.ComboBox();
-            this.comboBox29 = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomTextbox46 = new Bunifu.Framework.BunifuCustomTextbox();
+            this.car_yyyymm_t = new System.Windows.Forms.DateTimePicker();
+            this.car_yyyymm_f = new System.Windows.Forms.DateTimePicker();
+            this.car_reason = new Bunifu.Framework.BunifuCustomTextbox();
+            this.car_dept = new System.Windows.Forms.ComboBox();
+            this.car_com = new System.Windows.Forms.ComboBox();
+            this.car_job = new Bunifu.Framework.BunifuCustomTextbox();
             this.bunifuCustomLabel91 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel92 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomTextbox47 = new Bunifu.Framework.BunifuCustomTextbox();
-            this.bunifuCustomTextbox48 = new Bunifu.Framework.BunifuCustomTextbox();
+            this.car_pos = new Bunifu.Framework.BunifuCustomTextbox();
+            this.car_region = new Bunifu.Framework.BunifuCustomTextbox();
             this.bunifuCustomLabel96 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel97 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bas_pos_car = new Bunifu.Framework.BunifuCustomTextbox();
@@ -85,78 +85,78 @@
             this.bas_name_car.Size = new System.Drawing.Size(89, 27);
             this.bas_name_car.TabIndex = 56;
             // 
-            // dateTimePicker21
+            // car_yyyymm_t
             // 
-            this.dateTimePicker21.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker21.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker21.Location = new System.Drawing.Point(631, 30);
-            this.dateTimePicker21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker21.Name = "dateTimePicker21";
-            this.dateTimePicker21.Size = new System.Drawing.Size(165, 27);
-            this.dateTimePicker21.TabIndex = 130;
-            this.dateTimePicker21.TabStop = false;
+            this.car_yyyymm_t.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.car_yyyymm_t.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.car_yyyymm_t.Location = new System.Drawing.Point(631, 30);
+            this.car_yyyymm_t.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.car_yyyymm_t.Name = "car_yyyymm_t";
+            this.car_yyyymm_t.Size = new System.Drawing.Size(165, 27);
+            this.car_yyyymm_t.TabIndex = 130;
+            this.car_yyyymm_t.TabStop = false;
             // 
-            // dateTimePicker22
+            // car_yyyymm_f
             // 
-            this.dateTimePicker22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker22.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker22.Location = new System.Drawing.Point(374, 35);
-            this.dateTimePicker22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker22.Name = "dateTimePicker22";
-            this.dateTimePicker22.Size = new System.Drawing.Size(165, 27);
-            this.dateTimePicker22.TabIndex = 129;
-            this.dateTimePicker22.TabStop = false;
+            this.car_yyyymm_f.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.car_yyyymm_f.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.car_yyyymm_f.Location = new System.Drawing.Point(374, 35);
+            this.car_yyyymm_f.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.car_yyyymm_f.Name = "car_yyyymm_f";
+            this.car_yyyymm_f.Size = new System.Drawing.Size(165, 27);
+            this.car_yyyymm_f.TabIndex = 129;
+            this.car_yyyymm_f.TabStop = false;
             // 
-            // bunifuCustomTextbox45
+            // car_reason
             // 
-            this.bunifuCustomTextbox45.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox45.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox45.Location = new System.Drawing.Point(374, 112);
-            this.bunifuCustomTextbox45.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox45.Multiline = true;
-            this.bunifuCustomTextbox45.Name = "bunifuCustomTextbox45";
-            this.bunifuCustomTextbox45.Size = new System.Drawing.Size(165, 24);
-            this.bunifuCustomTextbox45.TabIndex = 74;
+            this.car_reason.BorderColor = System.Drawing.Color.SeaGreen;
+            this.car_reason.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.car_reason.Location = new System.Drawing.Point(374, 112);
+            this.car_reason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.car_reason.Multiline = true;
+            this.car_reason.Name = "car_reason";
+            this.car_reason.Size = new System.Drawing.Size(165, 24);
+            this.car_reason.TabIndex = 74;
             // 
-            // comboBox28
+            // car_dept
             // 
-            this.comboBox28.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox28.FormattingEnabled = true;
-            this.comboBox28.Items.AddRange(new object[] {
+            this.car_dept.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.car_dept.FormattingEnabled = true;
+            this.car_dept.Items.AddRange(new object[] {
             "전문학사",
             "학사",
             "석사",
             "박사"});
-            this.comboBox28.Location = new System.Drawing.Point(114, 116);
-            this.comboBox28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox28.Name = "comboBox28";
-            this.comboBox28.Size = new System.Drawing.Size(145, 28);
-            this.comboBox28.TabIndex = 68;
+            this.car_dept.Location = new System.Drawing.Point(114, 116);
+            this.car_dept.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.car_dept.Name = "car_dept";
+            this.car_dept.Size = new System.Drawing.Size(145, 28);
+            this.car_dept.TabIndex = 68;
             // 
-            // comboBox29
+            // car_com
             // 
-            this.comboBox29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox29.FormattingEnabled = true;
-            this.comboBox29.Items.AddRange(new object[] {
+            this.car_com.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.car_com.FormattingEnabled = true;
+            this.car_com.Items.AddRange(new object[] {
             "고등학교",
             "전문대",
             "대학교",
             "대학원"});
-            this.comboBox29.Location = new System.Drawing.Point(114, 32);
-            this.comboBox29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox29.Name = "comboBox29";
-            this.comboBox29.Size = new System.Drawing.Size(145, 28);
-            this.comboBox29.TabIndex = 67;
+            this.car_com.Location = new System.Drawing.Point(114, 32);
+            this.car_com.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.car_com.Name = "car_com";
+            this.car_com.Size = new System.Drawing.Size(145, 28);
+            this.car_com.TabIndex = 67;
             // 
-            // bunifuCustomTextbox46
+            // car_job
             // 
-            this.bunifuCustomTextbox46.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox46.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox46.Location = new System.Drawing.Point(374, 72);
-            this.bunifuCustomTextbox46.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox46.Name = "bunifuCustomTextbox46";
-            this.bunifuCustomTextbox46.Size = new System.Drawing.Size(165, 27);
-            this.bunifuCustomTextbox46.TabIndex = 66;
+            this.car_job.BorderColor = System.Drawing.Color.SeaGreen;
+            this.car_job.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.car_job.Location = new System.Drawing.Point(374, 72);
+            this.car_job.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.car_job.Name = "car_job";
+            this.car_job.Size = new System.Drawing.Size(165, 27);
+            this.car_job.TabIndex = 66;
             // 
             // bunifuCustomLabel91
             // 
@@ -178,25 +178,25 @@
             this.bunifuCustomLabel92.TabIndex = 54;
             this.bunifuCustomLabel92.Text = "직급(현재)";
             // 
-            // bunifuCustomTextbox47
+            // car_pos
             // 
-            this.bunifuCustomTextbox47.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox47.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox47.Location = new System.Drawing.Point(631, 72);
-            this.bunifuCustomTextbox47.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox47.Name = "bunifuCustomTextbox47";
-            this.bunifuCustomTextbox47.Size = new System.Drawing.Size(165, 27);
-            this.bunifuCustomTextbox47.TabIndex = 65;
+            this.car_pos.BorderColor = System.Drawing.Color.SeaGreen;
+            this.car_pos.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.car_pos.Location = new System.Drawing.Point(631, 72);
+            this.car_pos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.car_pos.Name = "car_pos";
+            this.car_pos.Size = new System.Drawing.Size(165, 27);
+            this.car_pos.TabIndex = 65;
             // 
-            // bunifuCustomTextbox48
+            // car_region
             // 
-            this.bunifuCustomTextbox48.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox48.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.bunifuCustomTextbox48.Location = new System.Drawing.Point(114, 76);
-            this.bunifuCustomTextbox48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuCustomTextbox48.Name = "bunifuCustomTextbox48";
-            this.bunifuCustomTextbox48.Size = new System.Drawing.Size(145, 27);
-            this.bunifuCustomTextbox48.TabIndex = 64;
+            this.car_region.BorderColor = System.Drawing.Color.SeaGreen;
+            this.car_region.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.car_region.Location = new System.Drawing.Point(114, 76);
+            this.car_region.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.car_region.Name = "car_region";
+            this.car_region.Size = new System.Drawing.Size(145, 27);
+            this.car_region.TabIndex = 64;
             // 
             // bunifuCustomLabel96
             // 
@@ -322,30 +322,30 @@
             // 
             // carDataGridView
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.carDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.carDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.carDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.carDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.carDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.carDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.carDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.carDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.carDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.carDataGridView.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.carDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.carDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.carDataGridView.DoubleBuffered = true;
             this.carDataGridView.EnableHeadersVisualStyles = false;
             this.carDataGridView.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(63)))), ((int)(((byte)(113)))));
@@ -362,14 +362,14 @@
             // groupBox24
             // 
             this.groupBox24.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox24.Controls.Add(this.dateTimePicker21);
-            this.groupBox24.Controls.Add(this.dateTimePicker22);
-            this.groupBox24.Controls.Add(this.bunifuCustomTextbox45);
-            this.groupBox24.Controls.Add(this.comboBox28);
-            this.groupBox24.Controls.Add(this.comboBox29);
-            this.groupBox24.Controls.Add(this.bunifuCustomTextbox46);
-            this.groupBox24.Controls.Add(this.bunifuCustomTextbox47);
-            this.groupBox24.Controls.Add(this.bunifuCustomTextbox48);
+            this.groupBox24.Controls.Add(this.car_yyyymm_t);
+            this.groupBox24.Controls.Add(this.car_yyyymm_f);
+            this.groupBox24.Controls.Add(this.car_reason);
+            this.groupBox24.Controls.Add(this.car_dept);
+            this.groupBox24.Controls.Add(this.car_com);
+            this.groupBox24.Controls.Add(this.car_job);
+            this.groupBox24.Controls.Add(this.car_pos);
+            this.groupBox24.Controls.Add(this.car_region);
             this.groupBox24.Controls.Add(this.bunifuCustomLabel95);
             this.groupBox24.Controls.Add(this.bunifuCustomLabel96);
             this.groupBox24.Controls.Add(this.bunifuCustomLabel97);
@@ -429,22 +429,18 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.BunifuCustomTextbox bas_dept_car;
-        private Bunifu.Framework.BunifuCustomTextbox bas_name_car;
-        private System.Windows.Forms.DateTimePicker dateTimePicker21;
-        private System.Windows.Forms.DateTimePicker dateTimePicker22;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox45;
-        private System.Windows.Forms.ComboBox comboBox28;
-        private System.Windows.Forms.ComboBox comboBox29;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox46;
+        private System.Windows.Forms.DateTimePicker car_yyyymm_t;
+        private System.Windows.Forms.DateTimePicker car_yyyymm_f;
+        private Bunifu.Framework.BunifuCustomTextbox car_reason;
+        private System.Windows.Forms.ComboBox car_dept;
+        private System.Windows.Forms.ComboBox car_com;
+        private Bunifu.Framework.BunifuCustomTextbox car_job;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel91;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel92;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox47;
-        private Bunifu.Framework.BunifuCustomTextbox bunifuCustomTextbox48;
+        private Bunifu.Framework.BunifuCustomTextbox car_pos;
+        private Bunifu.Framework.BunifuCustomTextbox car_region;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel96;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel97;
-        private Bunifu.Framework.BunifuCustomTextbox bas_pos_car;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel93;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel95;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel94;
@@ -453,9 +449,12 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel100;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel101;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel102;
-        private Bunifu.Framework.BunifuCustomTextbox bas_empno_car;
         private Bunifu.Framework.UI.BunifuCustomDataGrid carDataGridView;
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.GroupBox groupBox23;
+        public Bunifu.Framework.BunifuCustomTextbox bas_dept_car;
+        public Bunifu.Framework.BunifuCustomTextbox bas_name_car;
+        public Bunifu.Framework.BunifuCustomTextbox bas_pos_car;
+        public Bunifu.Framework.BunifuCustomTextbox bas_empno_car;
     }
 }

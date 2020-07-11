@@ -21,9 +21,24 @@ namespace insaSystem
             InitializeComponent();
         }
 
+        public void DataGridView_Double_clicked()
+        {
+
+        }
+
         public void Btn_insert_clicked()
         {
-            MessageBox.Show("학력사항 입력을 시작합니다.");
+            if (bas_empno_edu.Text == "")
+            {
+                MessageBox.Show("입력할 사원정보를 선택하세요");
+            }
+            else
+            {
+                TextboxClear();
+                MessageBox.Show("학력사항 입력을 시작합니다.");
+                InsaManagement.btncheck.Text = "E_I";
+                InsaManagement.Mode = "BlockIUD";
+            }
         }
 
         public void Btn_update_clicked()
@@ -97,6 +112,19 @@ namespace insaSystem
                 }
                 InsaManagement.Mode = "BlockCC";
             }
+        }
+
+        private void TextboxClear()
+        {
+            edu_loe.Text = "";
+            edu_schnm.Text = "";
+            edu_dept.Text = "";
+            edu_grade.Text = "";
+            edu_degree.Text = "";
+            edu_last.Text = "";
+            edu_gra.Text = "";
+            edu_entdate.Format = DateTimePickerFormat.Custom;
+            edu_gradate.Format = DateTimePickerFormat.Custom;
         }
     }
 }
