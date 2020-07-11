@@ -15,7 +15,7 @@ namespace insaSystem
     {
         DBOracle_Helper oHelper;
         public InsaManagement InsaManagement { get; set; }
-
+        string BtnCheck = "";
         public Insa02FamInfo()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace insaSystem
                 return;
             }
             else
-            { 
+            {
                 fam_rel.Focus();
                 MessageBox.Show("가족정보 입력을 시작합니다.");
 
@@ -50,18 +50,56 @@ namespace insaSystem
             }
         }
 
+        private void CallingEmployeeFamInfo()
+        {
+            if (bas_empno_fam.Text == "")
+            {
+                MessageBox.Show("조회할 사원정보를 선택하세요");
+                //enablefalse 들어가야함
+
+                return;
+            }
+            InsaManagement.Mode = "BlockIUD";
+            string fam_sql = "select fam_empno, fam_codnms as fam_rel, fam_name, fam_bth, fam_ltg" +
+                           " from  thrm_bas_psy,       " +
+                           "       thrm_fam_psy," +
+                           "       (select cd_grpcd, cd_code, cd_codnms as fam_codnms " +
+                           "       from  tieas_cd_psy where cd_grpcd = 'REL') " +
+                           " where bas_empno = fam_empno(+) and fam_rel = cd_code" +
+                           " and bas_empno = '" + bas_empno_fam.Text + "'";
+
+            DataTable FamInfo = oHelper.GetData(fam_sql);
+            foreach (DataRow Row in FamInfo.Rows)
+            {
+                if (Row == null)
+                {
+                    MessageBox.Show("등록되어있지 않는 가족정보입니다.");
+                    return;
+                }
+
+                bas_empno_fam.Text = Row["fam_empno"] as string;
+                fam_rel_code.Text = Row["fam_rel"] as string;
+                fam_name.Text = Row["fam_name"] as string;
+                fam_bth.Text = Row["fam_bth"] as string;
+                fam_ltg.Text = Row["fam_ltg"] as string;
+            }
+        }
+
         public void Btn_update_clicked()
         {
+            CallingEmployeeFamInfo();
+            BtnCheck = "F_U";
         }
 
         public void Btn_delete_clicked()
         {
-          
+            CallingEmployeeFamInfo();
+            BtnCheck = "F_D";
         }
 
         public void Btn_check_clicked()
         {
-            if (InsaManagement.btncheck.Text == "F_I")
+            if (BtnCheck == "F_I")
             {
                 int num = 0;
                 if (MessageBox.Show("입력된 가족사항을 저장하시겠습니까?", "가족사항", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -85,7 +123,7 @@ namespace insaSystem
                     InsaManagement.Mode = "BlockIUD";
                 }
 
-                if (InsaManagement.btncheck.Text == "F_U")
+                if (BtnCheck == "F_U")
                 {
                     if (MessageBox.Show("수정하시겠습니까?", "수정", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
@@ -106,7 +144,7 @@ namespace insaSystem
 
                     }
                 }
-                if (InsaManagement.btncheck.Text == "F_D")
+                if (BtnCheck == "F_D")
                 {
                     if (MessageBox.Show("삭제하시겠습니까?", "삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {

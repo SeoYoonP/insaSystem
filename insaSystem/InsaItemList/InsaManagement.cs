@@ -17,6 +17,7 @@ namespace insaSystem
     public partial class InsaManagement : Form
     {
         static public string Mode { get; set; }
+        public string getData;
         //public Insa01BaseInfo Insa01BaseInfo { get; set; }
         //public Insa02FamInfo Insa02FamInfo { get; set; }
         //public Insa03EduInfo Insa03EduInfo { get; set; }
@@ -71,7 +72,6 @@ namespace insaSystem
             #endregion
         }
 
-        public string getData;
         //수정 및 connection 필요함
         #region 사번테이블 EVENT CellMouseDoubleClick -- 통합
         //인사기본 데이터 테이블 정보 더블클릭시 데이터 가져가기

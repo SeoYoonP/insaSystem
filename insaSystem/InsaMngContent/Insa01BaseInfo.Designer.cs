@@ -98,7 +98,6 @@
             this.label57 = new System.Windows.Forms.Label();
             this.bas_wsta = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnCheck = new System.Windows.Forms.TextBox();
             this.label81 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
@@ -904,7 +903,6 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.BtnCheck);
             this.groupBox2.Controls.Add(this.bas_intern_no);
             this.groupBox2.Controls.Add(this.bas_dept);
             this.groupBox2.Controls.Add(this.bas_dept_code);
@@ -973,15 +971,6 @@
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "상세정보";
-            // 
-            // BtnCheck
-            // 
-            this.BtnCheck.Location = new System.Drawing.Point(689, 409);
-            this.BtnCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnCheck.Name = "BtnCheck";
-            this.BtnCheck.Size = new System.Drawing.Size(100, 29);
-            this.BtnCheck.TabIndex = 157;
-            this.BtnCheck.TextChanged += new System.EventHandler(this.BtnCheck_TextChanged);
             // 
             // label81
             // 

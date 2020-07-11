@@ -23,7 +23,6 @@ namespace insaSystem
         public Insa07ForlInfo Insa07ForlInfo { get; set; }
 
 
-
         string bas_mar = "";
         int num = 0;
         public Insa01BaseInfo()
