@@ -21,7 +21,7 @@ namespace insaSystem
         public Insa05CarInfo Insa05CarInfo { get; set; }
         public Insa06LicInfo Insa06LicInfo { get; set; }
         public Insa07ForlInfo Insa07ForlInfo { get; set; }
-
+        string BtnCheck = "";
 
         string bas_mar = "";
         int num = 0;
@@ -34,6 +34,7 @@ namespace insaSystem
         {
             oHelper = new DBOracle_Helper();
             InsabaseEnableFalse();
+            print_workersInformation();
         }
 
         public void DataGridView_Double_clicked()
@@ -235,7 +236,7 @@ namespace insaSystem
             InsabaseEnableTrue();
             TextboxClear();
             bas_empno.Focus();
-            BtnCheck.Text = "I";
+            BtnCheck = "I";
             //insamanagement.btncheck.text = this.btncheck.text;
             MessageBox.Show("인사기본사항 입력을 시작합니다.");
         }
@@ -243,13 +244,13 @@ namespace insaSystem
         public void Btn_update_clicked()
         {
             CallingEmployeeInfo();
-            BtnCheck.Text = "U";
+            BtnCheck = "U";
         }
 
         public void Btn_delete_clicked()
         {
             CallingEmployeeInfo();
-            BtnCheck.Text = "D";
+            BtnCheck = "D";
             InsabaseEnableFalse();
         }
 
@@ -279,7 +280,7 @@ namespace insaSystem
             result = bas_dept.Text;
             string[] dept = result.Split(':');
 
-            if (BtnCheck.Text == "I")
+            if (BtnCheck == "I")
             {
                 int num = 0;
                 if (MessageBox.Show("정보를 입력하시겠습니까?", "정보저장", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -329,7 +330,7 @@ namespace insaSystem
             }
 
 
-            if (BtnCheck.Text == "U")
+            if (BtnCheck == "U")
             {
                 if (MessageBox.Show("수정하시겠습니까?", "수정", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -384,7 +385,7 @@ namespace insaSystem
                 }
             }
 
-            if (BtnCheck.Text == "D")
+            if (BtnCheck == "D")
             {
                 if (MessageBox.Show("삭제하시겠습니까?", "삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -409,7 +410,7 @@ namespace insaSystem
 
         public void Btn_cancel_clicked()
         {
-            if (BtnCheck.Text == "I")
+            if (BtnCheck == "I")
             {
                 if (MessageBox.Show("취소하시면 입력하신 정보가 모두 저장되지 않습니다. 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -427,7 +428,7 @@ namespace insaSystem
                 InsaManagement.Mode = "BlockCC";
             }
 
-            if (BtnCheck.Text == "U")
+            if (BtnCheck == "U")
             {
                 if (MessageBox.Show("수정을 취소합니다.", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -445,7 +446,7 @@ namespace insaSystem
                 InsaManagement.Mode = "BlockCC";
             }
 
-            if (BtnCheck.Text == "D")
+            if (BtnCheck == "D")
             {
                 if (MessageBox.Show("데이터 삭제가 취소되었습니다 . 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

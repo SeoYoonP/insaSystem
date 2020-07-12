@@ -1360,7 +1360,6 @@
         private System.Windows.Forms.Button bas_zip_cdbt;
         private System.Windows.Forms.TextBox bas_cname;
         private System.Windows.Forms.Label label46;
-        public System.Windows.Forms.TextBox BtnCheck;
         public System.Windows.Forms.TextBox bas_empno;
     }
 }
